@@ -1,0 +1,12 @@
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.csproj.AssemblyReference.cache
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.Properties.Resources.resources
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.csproj.GenerateResource.cache
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.csproj.CoreCompileInputs.cache
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.Form1.resources
+C:\Users\Ivaldo\source\repos\Ava\Ava\bin\Debug\Ava.exe.config
+C:\Users\Ivaldo\source\repos\Ava\Ava\bin\Debug\Ava.exe
+C:\Users\Ivaldo\source\repos\Ava\Ava\bin\Debug\Ava.pdb
+C:\Users\Ivaldo\source\repos\Ava\Ava\bin\Debug\Microsoft.Speech.dll
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.csproj.CopyComplete
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.exe
+C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.pdb
