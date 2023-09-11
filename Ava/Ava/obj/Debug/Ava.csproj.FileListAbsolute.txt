@@ -10,3 +10,13 @@ C:\Users\Ivaldo\source\repos\Ava\Ava\bin\Debug\Microsoft.Speech.dll
 C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.csproj.CopyComplete
 C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.exe
 C:\Users\Ivaldo\source\repos\Ava\Ava\obj\Debug\Ava.pdb
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\Ava.exe.config
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\Ava.exe
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\Ava.pdb
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.AssemblyReference.cache
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.Form1.resources
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.Properties.Resources.resources
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.GenerateResource.cache
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.CoreCompileInputs.cache
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.exe
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.pdb

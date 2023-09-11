@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Microsoft.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Globalization;
+using System.IO;
+using System.Security.Policy;
 
 namespace Ava
 {
@@ -19,7 +21,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
 
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "em qual mês estamos?" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva","eiva?", "em qual mês estamos?", "gugou", "que tal, livros", "edgar alan pou", "iutube", "que tal uma música", "sódus", "obrigado" };
         public Form1()
         {
             InitializeComponent();
@@ -85,15 +87,77 @@ namespace Ava
             {
                 resposta.SpeakAsync("olá usuário, como posso ajudar?");
             }
+
+
             else if (frase.Equals("qual é o seu nome"))
             {
                 resposta.SpeakAsync("meu nome é eiva");
             }
+
+
+            else if (frase.Equals("boa noite eiva"))
+            {
+                resposta.SpeakAsync("boa noite");
+            }
+
+
+            else if (frase.Equals("eiva?"))
+            {
+                resposta.SpeakAsync("Sim?");
+            }
+
+
             else if (frase.Equals("em qual mês estamos?"))
             {
                 resposta.SpeakAsync("estamos no mês de setembro");
             }
 
+
+            else if (frase.Equals("gugou"))
+            {
+                string target = "http://www.google.com";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+            else if (frase.Equals("que tal, livros"))
+            {
+                resposta.SpeakAsync("qual autor?");
+            }
+
+            else if (frase.Equals("edgar alan pou"))
+            {
+                string target = "https://elivros.love/autor/Edgar-Allan-Poe";
+                System.Diagnostics.Process.Start(target);
+            }
+
+
+            else if (frase.Equals("iutube"))
+            {
+                string target2 = "https://www.youtube.com/";
+                System.Diagnostics.Process.Start(target2);
+            }
+
+            else if (frase.Equals("que tal uma música"))
+            {
+                resposta.SpeakAsync("diga o nome");
+            }
+
+
+            else if (frase.Equals("sódus"))
+            {
+                
+                string target3 = "https://youtu.be/gR3Osz_5r14?si=J4EfjUU0TS7cuv63";
+                System.Diagnostics.Process.Start(target3);
+
+            }
+     
+
+            else if (frase.Equals("obrigado"))
+            {
+                resposta.SpeakAsync("disponha");
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
