@@ -21,7 +21,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
 
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva","eiva?", "em qual mês estamos?", "gugou", "que tal, livros", "edgar alan pou", "iutube", "que tal uma música", "sódus", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "em qual mês estamos?", "gugou", "que tal, livros", "edgar alan pou", "iutube", "que tal uma música", "sódus", "obrigado" };
         public Form1()
         {
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace Ava
         public void init()
         {
             resposta.Volume = 100;
-            resposta.Rate = 3;
+            resposta.Rate = 2;
 
             Gramatica();
         }
@@ -100,6 +100,16 @@ namespace Ava
                 resposta.SpeakAsync("boa noite");
             }
 
+            else if (frase.Equals("tudo bem?"))
+            {
+                resposta.SpeakAsync("Tudo perfeito, e contigo?");
+            }
+
+            else if (frase.Equals("estou bem"))
+            {
+                resposta.SpeakAsync("bom saber!");
+            }
+
 
             else if (frase.Equals("eiva?"))
             {
@@ -123,6 +133,7 @@ namespace Ava
             else if (frase.Equals("que tal, livros"))
             {
                 resposta.SpeakAsync("qual autor?");
+                
             }
 
             else if (frase.Equals("edgar alan pou"))
@@ -131,7 +142,7 @@ namespace Ava
                 System.Diagnostics.Process.Start(target);
             }
 
-
+            
             else if (frase.Equals("iutube"))
             {
                 string target2 = "https://www.youtube.com/";
@@ -169,5 +180,12 @@ namespace Ava
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }
