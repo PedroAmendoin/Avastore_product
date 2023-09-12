@@ -12,9 +12,11 @@ using System.Speech.Synthesis;
 using System.Globalization;
 using System.IO;
 using System.Security.Policy;
+using System.Speech.Synthesis.TtsEngine;
 
 namespace Ava
 {
+
     public partial class Form1 : Form
     {
         static CultureInfo ci = new CultureInfo("pt-BR");//definindo o idioma
@@ -171,11 +173,6 @@ namespace Ava
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
@@ -183,7 +180,7 @@ namespace Ava
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
 
