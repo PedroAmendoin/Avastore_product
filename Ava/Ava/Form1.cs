@@ -13,6 +13,7 @@ using System.Globalization;
 using System.IO;
 using System.Security.Policy;
 using System.Speech.Synthesis.TtsEngine;
+using System.Diagnostics;
 
 namespace Ava
 {
@@ -22,8 +23,8 @@ namespace Ava
         static CultureInfo ci = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
-
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "em qual mês estamos?", "gugou", "que tal, livros", "edgar alan pou", "iutube", "que tal uma música", "sódus", "obrigado" };
+       
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "gugou", "iutube", "obrigado" };
         public Form1()
         {
             InitializeComponent();
@@ -112,64 +113,69 @@ namespace Ava
                 resposta.SpeakAsync("bom saber!");
             }
 
-
-            else if (frase.Equals("eiva?"))
-            {
-                resposta.SpeakAsync("Sim?");
-            }
-
-
-            else if (frase.Equals("em qual mês estamos?"))
-            {
-                resposta.SpeakAsync("estamos no mês de setembro");
-            }
-
-
             else if (frase.Equals("gugou"))
             {
+
                 string target = "http://www.google.com";
                 System.Diagnostics.Process.Start(target);
 
             }
 
-            else if (frase.Equals("que tal, livros"))
+            else if (frase.Equals("iutube"))
             {
-                resposta.SpeakAsync("qual autor?");
-                
-            }
-
-            else if (frase.Equals("edgar alan pou"))
-            {
-                string target = "https://elivros.love/autor/Edgar-Allan-Poe";
+                string target = "http://www.youtube.com";
                 System.Diagnostics.Process.Start(target);
             }
 
-            
-            else if (frase.Equals("iutube"))
+            else if (frase.Equals("eiva?"))
             {
-                string target2 = "https://www.youtube.com/";
-                System.Diagnostics.Process.Start(target2);
-            }
+                textBox1.Focus();
+                resposta.SpeakAsync("sim?");
 
-            else if (frase.Equals("que tal uma música"))
-            {
-                resposta.SpeakAsync("diga o nome");
             }
 
 
-            else if (frase.Equals("sódus"))
+            else if (textBox1.Focus()==true)
             {
+                if (frase.Equals("calendário"))
+                {
+                    frase = "calendário do ano";
+                }
+                else if (frase.Equals("previsão do tempo"))
+                {
+
+                }
+                else if (frase.Equals("jogos"))
+                {
+                    frase = "jogos da steam";
+                }
+
+
+                    textBox1.Text = frase;
+                    resposta.SpeakAsync("pesquisando");
+                    string target = "https://www.google.com/search?q=" + frase;
+
+                    System.Diagnostics.Process.Start(target);
+                    pictureBox1.Focus();
+                    textBox1.Text = "";
                 
-                string target3 = "https://youtu.be/gR3Osz_5r14?si=J4EfjUU0TS7cuv63";
-                System.Diagnostics.Process.Start(target3);
-
+                
             }
+            
+
+            
+            
      
 
             else if (frase.Equals("obrigado"))
             {
                 resposta.SpeakAsync("disponha");
             }
+
+
+
+
+
             
         }
 
@@ -184,5 +190,9 @@ namespace Ava
         }
 
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
