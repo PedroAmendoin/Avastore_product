@@ -10,10 +10,8 @@ using System.Windows.Forms;
 using Microsoft.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Globalization;
-using System.IO;
-using System.Security.Policy;
-using System.Speech.Synthesis.TtsEngine;
 using System.Diagnostics;
+using System.Net.WebSockets;
 
 namespace Ava
 {
@@ -24,7 +22,8 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "gugou", "iutube", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube", "obrigado" };
+       
         public Form1()
         {
             InitializeComponent();
@@ -116,27 +115,32 @@ namespace Ava
             else if (frase.Equals("gugou"))
             {
 
-                string target = "http://www.google.com";
+                string target = "https://www.google.com.br/";
                 System.Diagnostics.Process.Start(target);
 
             }
 
             else if (frase.Equals("iutube"))
             {
-                string target = "http://www.youtube.com";
+                 string target = "http://www.youtube.com";
                 System.Diagnostics.Process.Start(target);
             }
 
+
             else if (frase.Equals("eiva?"))
             {
-                textBox1.Focus();
+                mic.Focus();
                 resposta.SpeakAsync("sim?");
-
+                mic.BackColor = Color.Purple;
+                mic.ForeColor = Color.White;
             }
 
 
-            else if (textBox1.Focus()==true)
+            else if (mic.Focus()==true)
             {
+
+               
+
                 if (frase.Equals("calendário"))
                 {
                     frase = "calendário do ano";
@@ -149,22 +153,22 @@ namespace Ava
                 {
                     frase = "jogos da steam";
                 }
+                else if (frase.Equals("cachorro"))
+                {
 
+                }
 
-                    textBox1.Text = frase;
+                    mic.BackColor = Color.White;
+                    mic.ForeColor = Color.Black;
+                   
                     resposta.SpeakAsync("pesquisando");
                     string target = "https://www.google.com/search?q=" + frase;
-
                     System.Diagnostics.Process.Start(target);
-                    pictureBox1.Focus();
-                    textBox1.Text = "";
+               
+               
                 
-                
-            }
-            
+            } 
 
-            
-            
      
 
             else if (frase.Equals("obrigado"))
@@ -173,10 +177,6 @@ namespace Ava
             }
 
 
-
-
-
-            
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -186,13 +186,22 @@ namespace Ava
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           
+         
         }
 
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void mic_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
