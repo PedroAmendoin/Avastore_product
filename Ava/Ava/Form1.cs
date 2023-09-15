@@ -22,7 +22,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube","minha casa", "obrigado" };
        
         public Form1()
         {
@@ -90,6 +90,10 @@ namespace Ava
                 resposta.SpeakAsync("olá usuário, como posso ajudar?");
             }
 
+            else if (frase.Equals("obrigado"))
+            {
+                resposta.SpeakAsync("disponha");
+            }
 
             else if (frase.Equals("qual é o seu nome"))
             {
@@ -122,9 +126,10 @@ namespace Ava
 
             else if (frase.Equals("iutube"))
             {
-                 string target = "http://www.youtube.com";
+                string target = "http://www.youtube.com";
                 System.Diagnostics.Process.Start(target);
             }
+
 
 
             else if (frase.Equals("eiva?"))
@@ -136,10 +141,10 @@ namespace Ava
             }
 
 
-            else if (mic.Focus()==true)
+            else if (mic.Focus() == true && !frase.Equals("minha casa"))
             {
 
-               
+
 
                 if (frase.Equals("calendário"))
                 {
@@ -158,23 +163,31 @@ namespace Ava
 
                 }
 
-                    mic.BackColor = Color.White;
-                    mic.ForeColor = Color.Black;
-                   
-                    resposta.SpeakAsync("pesquisando");
-                    string target = "https://www.google.com/search?q=" + frase;
-                    System.Diagnostics.Process.Start(target);
-               
-               
-                
-            } 
 
-     
+                mic.BackColor = Color.White;
+                mic.ForeColor = Color.Black;
 
-            else if (frase.Equals("obrigado"))
-            {
-                resposta.SpeakAsync("disponha");
+                resposta.SpeakAsync("pesquisando");
+                string target = "https://www.google.com/search?q=" + frase;
+                System.Diagnostics.Process.Start(target);
+
+
+
             }
+
+            else if (frase.Equals("minha casa"))
+            {
+               
+                    casa gocomodo = new casa();
+                    gocomodo.ShowDialog();
+                this.Hide();
+                    
+                
+
+            }
+
+
+           
 
 
         }

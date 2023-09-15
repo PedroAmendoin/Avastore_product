@@ -20,3 +20,7 @@ D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.Generate
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.CoreCompileInputs.cache
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.exe
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.pdb
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.IO.Ports.dll
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.IO.Ports.xml
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.CopyComplete
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.casa.resources
