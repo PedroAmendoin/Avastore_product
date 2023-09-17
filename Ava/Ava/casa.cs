@@ -207,7 +207,7 @@ namespace Ava
                 }
 
 
-                else if (frase.Equals("temperatura do baheiro"))
+                else if (frase.Equals("temperatura do banheiro"))
                 {
                     temp_banheiro.Text = tempB;
                     temp_banheiro.Show();
@@ -296,7 +296,7 @@ namespace Ava
 
         private void temp_banheiro_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

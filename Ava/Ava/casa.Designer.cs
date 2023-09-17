@@ -130,9 +130,8 @@
             // temp_banheiro
             // 
             this.temp_banheiro.BackColor = System.Drawing.Color.White;
-            this.temp_banheiro.Enabled = false;
             this.temp_banheiro.ForeColor = System.Drawing.Color.Black;
-            this.temp_banheiro.Location = new System.Drawing.Point(99, 275);
+            this.temp_banheiro.Location = new System.Drawing.Point(100, 275);
             this.temp_banheiro.Name = "temp_banheiro";
             this.temp_banheiro.Size = new System.Drawing.Size(75, 23);
             this.temp_banheiro.TabIndex = 8;
