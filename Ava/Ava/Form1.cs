@@ -168,7 +168,7 @@ namespace Ava
                 mic.ForeColor = Color.Black;
 
                 resposta.SpeakAsync("pesquisando");
-                string target = "https://www.google.com/search?q=" + frase;
+                string target = "https://www.google.com/search?q=" + e.Result.Text;
                 System.Diagnostics.Process.Start(target);
 
 

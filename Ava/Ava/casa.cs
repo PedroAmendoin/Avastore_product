@@ -18,11 +18,16 @@ namespace Ava
 
     public partial class casa : Form
     {
+        string tempQ = "22°C";
+        string tempC = "22°C";
+        string tempS = "22°C";
+        string tempB = "22°C";
+
         static CultureInfo co = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor2;
         SpeechSynthesizer resposta2 = new SpeechSynthesizer();
 
-        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou bem", "eiva?","ascender luz do quarto","apagar luz do quarto", "ascender luz da cozinha","apagar luz da cozinha", "ascender luz da sala","apagar luz da sala", "ascender luz do banheiro","apagar luz do banheiro", "pesquisa", "obrigado" };
+        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou bem", "eiva?","ascender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "ascender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "ascender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "ascender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "pesquisa", "obrigado" };
 
         public casa()
         {
@@ -122,7 +127,7 @@ namespace Ava
             {
 
 
-
+                //quarto;
                 if (frase.Equals("ascender luz do quarto"))
                 {
                     quarto.BackColor = Color.Yellow;
@@ -131,6 +136,20 @@ namespace Ava
                 {
                     quarto.BackColor = Color.Gray;
                 }
+
+
+                else if (frase.Equals("temperatura do quarto"))
+                {
+                    temp_quarto.Text = tempQ;
+                    temp_quarto.Show();
+                }
+                else if (frase.Equals("fechar temperatura do quarto"))
+                {
+                    temp_quarto.Hide();
+                }
+
+
+                //cozinha;
 
                 else if (frase.Equals("ascender luz da cozinha"))
                 {
@@ -141,6 +160,20 @@ namespace Ava
                     cozinha.BackColor = Color.Gray;
                 }
 
+
+                else if (frase.Equals("temperatura da cozinha"))
+                {
+                    temp_cozinha.Text = tempC;
+                    temp_cozinha.Show();
+                }
+                else if (frase.Equals("fechar temperatura da cozinha"))
+                {
+                    temp_cozinha.Hide();
+                }
+
+
+                //sala;
+
                 else if (frase.Equals("ascender luz da sala"))
                 {
                     sala.BackColor = Color.Yellow;
@@ -150,6 +183,20 @@ namespace Ava
                     sala.BackColor = Color.Gray;
                 }
 
+
+                else if (frase.Equals("temperatura da sala"))
+                {
+                    temp_sala.Text = tempS;
+                    temp_sala.Show();
+                }
+                else if (frase.Equals("fechar temperatura da sala"))
+                {
+                    temp_sala.Hide();
+                }
+
+
+                //banheiro;
+
                 else if (frase.Equals("ascender luz do banheiro"))
                 {
                     banheiro.BackColor = Color.Yellow;
@@ -158,6 +205,19 @@ namespace Ava
                 {
                     banheiro.BackColor = Color.Gray;
                 }
+
+
+                else if (frase.Equals("temperatura do baheiro"))
+                {
+                    temp_banheiro.Text = tempB;
+                    temp_banheiro.Show();
+                }
+                else if (frase.Equals("fechar temperatura do banheiro"))
+                {
+                    temp_banheiro.Hide();
+                }
+
+                //muda a cor do botâo de recepção de áudio
 
                 mic.BackColor = Color.White;
                 mic.ForeColor = Color.Black;
@@ -214,6 +274,29 @@ namespace Ava
         private void cômodo_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        //temperatura dos cômodos:
+
+        private void temp_quarto_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void temp_cozinha_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void temp_sala_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void temp_banheiro_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
