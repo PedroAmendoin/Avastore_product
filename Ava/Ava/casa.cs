@@ -227,7 +227,7 @@ namespace Ava
 
             else if (frase.Equals("pesquisa"))
             {
-                Form1 goform1 = new Form1();
+                menu goform1 = new menu();
                 goform1.ShowDialog();
                 this.Close();
                

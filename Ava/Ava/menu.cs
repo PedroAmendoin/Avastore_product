@@ -16,7 +16,7 @@ using System.Net.WebSockets;
 namespace Ava
 {
 
-    public partial class Form1 : Form
+    public partial class menu : Form
     {
         static CultureInfo ci = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor;
@@ -24,7 +24,7 @@ namespace Ava
        
         public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube","minha casa", "obrigado" };
        
-        public Form1()
+        public menu()
         {
             InitializeComponent();
             init();

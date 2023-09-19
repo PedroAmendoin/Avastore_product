@@ -14,7 +14,6 @@ D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\Ava.exe.config
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\Ava.exe
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\Ava.pdb
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.AssemblyReference.cache
-D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.Form1.resources
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.Properties.Resources.resources
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.GenerateResource.cache
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.CoreCompileInputs.cache
@@ -24,3 +23,5 @@ D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.IO.Ports.dll
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.IO.Ports.xml
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.csproj.CopyComplete
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.casa.resources
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.login.resources
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.menu.resources
