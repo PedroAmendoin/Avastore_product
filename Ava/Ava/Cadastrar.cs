@@ -110,5 +110,13 @@ namespace Ava
         {
 
         }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            
+           
+        }
     }
 }

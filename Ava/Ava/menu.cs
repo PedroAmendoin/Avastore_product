@@ -142,18 +142,16 @@ namespace Ava
 
             else if (frase.Equals("minha casa"))
             {
-               
-                    casa gocomodo = new casa();
-                    gocomodo.ShowDialog();
-                this.Hide();
+                this.Visible = false;
+                casa gocomodo = new casa();
+                gocomodo.ShowDialog();
+                this.Visible = true;
+                
 
             }
 
             else if (frase.Equals("loguin"))
             {
-
-                Login gologin = new Login();
-                DialogResult = gologin.ShowDialog();
                 this.Close();
 
             }

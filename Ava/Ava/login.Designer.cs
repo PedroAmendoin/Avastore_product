@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.Entrar = new System.Windows.Forms.Button();
             this.Senha = new System.Windows.Forms.TextBox();
@@ -35,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ir_cadastro = new System.Windows.Forms.LinkLabel();
+            this.ed_conta = new System.Windows.Forms.LinkLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // Entrar
@@ -104,6 +107,26 @@
             this.ir_cadastro.Text = "Cadastrar";
             this.ir_cadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ir_cadastro_LinkClicked);
             // 
+            // ed_conta
+            // 
+            this.ed_conta.AutoSize = true;
+            this.ed_conta.BackColor = System.Drawing.Color.Yellow;
+            this.ed_conta.ForeColor = System.Drawing.Color.Black;
+            this.ed_conta.LinkColor = System.Drawing.Color.Black;
+            this.ed_conta.Location = new System.Drawing.Point(410, 348);
+            this.ed_conta.Name = "ed_conta";
+            this.ed_conta.Size = new System.Drawing.Size(34, 13);
+            this.ed_conta.TabIndex = 15;
+            this.ed_conta.TabStop = true;
+            this.ed_conta.Text = "conta";
+            this.ed_conta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ed_conta_LinkClicked);
+            this.ed_conta.MouseLeave += new System.EventHandler(this.ed_conta_MouseLeave);
+            this.ed_conta.MouseHover += new System.EventHandler(this.ed_conta_MouseHover);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,6 +134,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ed_conta);
             this.Controls.Add(this.ir_cadastro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,5 +158,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel ir_cadastro;
+        private System.Windows.Forms.LinkLabel ed_conta;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ava
 {
@@ -51,12 +52,12 @@ namespace Ava
                 registro.Read();
                 us.usuario = Convert.ToString(registro["usuario"]);
                 us.senha = Convert.ToString(registro["senha"]);
-
-
-                this.Hide();
+                
+                
+                this.Visible = false;
                 menu go_menu = new menu();
                 go_menu.ShowDialog();
-
+                this.Visible = true;
 
             }
 
@@ -77,13 +78,16 @@ namespace Ava
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void ir_cadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+           this.Visible = false;
             Cadastrar gocadastrar = new Cadastrar();
             gocadastrar.ShowDialog();
+            this.Visible = true;
+            
         }
 
         private void Usuario_MouseHover(object sender, EventArgs e)
@@ -114,6 +118,26 @@ namespace Ava
         private void Senha_Click(object sender, EventArgs e)
         {
             Senha.Size = new System.Drawing.Size(255, 20);
+        }
+
+        private void ed_conta_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(ed_conta, "recuperar/alterar senha/excluir conta");
+        }
+
+        private void ed_conta_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ed_conta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 

@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Entrar = new System.Windows.Forms.Button();
+            this.Voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Apelido
@@ -108,7 +109,17 @@
             this.Entrar.UseVisualStyleBackColor = true;
             this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
             // 
-            // login
+            // Voltar
+            // 
+            this.Voltar.Location = new System.Drawing.Point(55, 83);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(75, 23);
+            this.Voltar.TabIndex = 7;
+            this.Voltar.Text = "Voltar";
+            this.Voltar.UseVisualStyleBackColor = true;
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
+            // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,6 +127,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Entrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -124,7 +136,7 @@
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.Apelido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "login";
+            this.Name = "Cadastrar";
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
             this.ResumeLayout(false);
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Entrar;
+        private System.Windows.Forms.Button Voltar;
     }
 }
