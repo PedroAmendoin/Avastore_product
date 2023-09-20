@@ -16,7 +16,7 @@ namespace Ava
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu());
+            Application.Run(new Login());
         }
     }
 }

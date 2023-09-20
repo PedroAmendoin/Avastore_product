@@ -22,7 +22,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube","minha casa", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube","minha casa","loguin", "obrigado" };
        
         public menu()
         {
@@ -140,54 +140,23 @@ namespace Ava
                 mic.ForeColor = Color.White;
             }
 
-
-            else if (mic.Focus() == true && !frase.Equals("minha casa"))
-            {
-
-
-
-                if (frase.Equals("calendário"))
-                {
-                    frase = "calendário do ano";
-                }
-                else if (frase.Equals("previsão do tempo"))
-                {
-
-                }
-                else if (frase.Equals("jogos"))
-                {
-                    frase = "jogos da steam";
-                }
-                else if (frase.Equals("cachorro"))
-                {
-
-                }
-
-
-                mic.BackColor = Color.White;
-                mic.ForeColor = Color.Black;
-
-                resposta.SpeakAsync("pesquisando");
-                string target = "https://www.google.com/search?q=" + e.Result.Text;
-                System.Diagnostics.Process.Start(target);
-
-
-
-            }
-
             else if (frase.Equals("minha casa"))
             {
                
                     casa gocomodo = new casa();
                     gocomodo.ShowDialog();
                 this.Hide();
-                    
-                
 
             }
 
+            else if (frase.Equals("loguin"))
+            {
 
-           
+                Login gologin = new Login();
+                DialogResult = gologin.ShowDialog();
+                this.Close();
+
+            }
 
 
         }
