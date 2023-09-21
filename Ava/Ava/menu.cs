@@ -12,6 +12,7 @@ using System.Speech.Synthesis;
 using System.Globalization;
 using System.Diagnostics;
 using System.Net.WebSockets;
+using System.Threading;
 
 namespace Ava
 {
@@ -22,7 +23,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "calendário", "previsão do tempo", "jogos", "cachorro", "gugou", "iutube","minha casa","loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "gugou", "iutube","minha casa","loguin", "obrigado" };
        
         public menu()
         {
@@ -85,6 +86,24 @@ namespace Ava
 
             string frase = e.Result.Text;
 
+            if (frase.Length.Equals(null)== false)
+            {
+                MyAsyncMethod();
+               
+            }
+           
+
+             async Task MyAsyncMethod()
+                {
+                     mic.BackColor = Color.Purple;
+                mic.ForeColor = Color.White;
+
+                await Task.Delay(5000);
+
+                mic.BackColor = Color.White;
+                mic.ForeColor = Color.Black;
+                }
+               
             if (frase.Equals("olá"))
             {
                 resposta.SpeakAsync("olá usuário, como posso ajudar?");
@@ -181,7 +200,7 @@ namespace Ava
 
         private void mic_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

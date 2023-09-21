@@ -27,7 +27,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor2;
         SpeechSynthesizer resposta2 = new SpeechSynthesizer();
 
-        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou bem", "eiva?","ascender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "ascender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "ascender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "ascender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "pesquisa", "obrigado" };
+        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou bem", "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "pesquisa", "obrigado" };
 
         public casa()
         {
@@ -128,7 +128,7 @@ namespace Ava
 
 
                 //quarto;
-                if (frase.Equals("ascender luz do quarto"))
+                if (frase.Equals("acender luz do quarto"))
                 {
                     quarto.BackColor = Color.Yellow;
                 }
@@ -151,7 +151,7 @@ namespace Ava
 
                 //cozinha;
 
-                else if (frase.Equals("ascender luz da cozinha"))
+                else if (frase.Equals("acender luz da cozinha"))
                 {
                     cozinha.BackColor = Color.Yellow;
                 }
@@ -174,7 +174,7 @@ namespace Ava
 
                 //sala;
 
-                else if (frase.Equals("ascender luz da sala"))
+                else if (frase.Equals("acender luz da sala"))
                 {
                     sala.BackColor = Color.Yellow;
                 }
@@ -197,7 +197,7 @@ namespace Ava
 
                 //banheiro;
 
-                else if (frase.Equals("ascender luz do banheiro"))
+                else if (frase.Equals("acender luz do banheiro"))
                 {
                     banheiro.BackColor = Color.Yellow;
                 }

@@ -42,7 +42,7 @@
             // 
             // Entrar
             // 
-            this.Entrar.Location = new System.Drawing.Point(391, 264);
+            this.Entrar.Location = new System.Drawing.Point(369, 263);
             this.Entrar.Name = "Entrar";
             this.Entrar.Size = new System.Drawing.Size(75, 23);
             this.Entrar.TabIndex = 11;
@@ -52,7 +52,7 @@
             // 
             // Senha
             // 
-            this.Senha.Location = new System.Drawing.Point(307, 215);
+            this.Senha.Location = new System.Drawing.Point(286, 215);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(250, 20);
             this.Senha.TabIndex = 8;
@@ -64,7 +64,7 @@
             // 
             // Usuario
             // 
-            this.Usuario.Location = new System.Drawing.Point(307, 163);
+            this.Usuario.Location = new System.Drawing.Point(286, 163);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(250, 20);
             this.Usuario.TabIndex = 7;
@@ -77,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 163);
+            this.label1.Location = new System.Drawing.Point(225, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 12;
@@ -87,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 215);
+            this.label2.Location = new System.Drawing.Point(225, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 13;
@@ -99,7 +99,7 @@
             this.ir_cadastro.AutoSize = true;
             this.ir_cadastro.BackColor = System.Drawing.Color.Yellow;
             this.ir_cadastro.LinkColor = System.Drawing.Color.Black;
-            this.ir_cadastro.Location = new System.Drawing.Point(401, 315);
+            this.ir_cadastro.Location = new System.Drawing.Point(380, 310);
             this.ir_cadastro.Name = "ir_cadastro";
             this.ir_cadastro.Size = new System.Drawing.Size(52, 13);
             this.ir_cadastro.TabIndex = 14;
@@ -113,7 +113,7 @@
             this.ed_conta.BackColor = System.Drawing.Color.Yellow;
             this.ed_conta.ForeColor = System.Drawing.Color.Black;
             this.ed_conta.LinkColor = System.Drawing.Color.Black;
-            this.ed_conta.Location = new System.Drawing.Point(410, 348);
+            this.ed_conta.Location = new System.Drawing.Point(389, 336);
             this.ed_conta.Name = "ed_conta";
             this.ed_conta.Size = new System.Drawing.Size(34, 13);
             this.ed_conta.TabIndex = 15;
