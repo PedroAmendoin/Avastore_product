@@ -38,11 +38,13 @@
             this.ir_cadastro = new System.Windows.Forms.LinkLabel();
             this.ed_conta = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Entrar
             // 
-            this.Entrar.Location = new System.Drawing.Point(369, 263);
+            this.Entrar.Location = new System.Drawing.Point(378, 274);
             this.Entrar.Name = "Entrar";
             this.Entrar.Size = new System.Drawing.Size(75, 23);
             this.Entrar.TabIndex = 11;
@@ -52,7 +54,7 @@
             // 
             // Senha
             // 
-            this.Senha.Location = new System.Drawing.Point(286, 215);
+            this.Senha.Location = new System.Drawing.Point(286, 232);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(250, 20);
             this.Senha.TabIndex = 8;
@@ -64,7 +66,7 @@
             // 
             // Usuario
             // 
-            this.Usuario.Location = new System.Drawing.Point(286, 163);
+            this.Usuario.Location = new System.Drawing.Point(286, 193);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(250, 20);
             this.Usuario.TabIndex = 7;
@@ -77,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(225, 163);
+            this.label1.Location = new System.Drawing.Point(225, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 12;
@@ -87,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 215);
+            this.label2.Location = new System.Drawing.Point(225, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 13;
@@ -99,7 +101,7 @@
             this.ir_cadastro.AutoSize = true;
             this.ir_cadastro.BackColor = System.Drawing.Color.Yellow;
             this.ir_cadastro.LinkColor = System.Drawing.Color.Black;
-            this.ir_cadastro.Location = new System.Drawing.Point(380, 310);
+            this.ir_cadastro.Location = new System.Drawing.Point(389, 319);
             this.ir_cadastro.Name = "ir_cadastro";
             this.ir_cadastro.Size = new System.Drawing.Size(52, 13);
             this.ir_cadastro.TabIndex = 14;
@@ -113,7 +115,7 @@
             this.ed_conta.BackColor = System.Drawing.Color.Yellow;
             this.ed_conta.ForeColor = System.Drawing.Color.Black;
             this.ed_conta.LinkColor = System.Drawing.Color.Black;
-            this.ed_conta.Location = new System.Drawing.Point(389, 336);
+            this.ed_conta.Location = new System.Drawing.Point(398, 353);
             this.ed_conta.Name = "ed_conta";
             this.ed_conta.Size = new System.Drawing.Size(34, 13);
             this.ed_conta.TabIndex = 15;
@@ -127,13 +129,24 @@
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(378, 101);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 72);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Aquamarine;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ed_conta);
             this.Controls.Add(this.ir_cadastro);
             this.Controls.Add(this.label2);
@@ -145,6 +158,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +174,6 @@
         private System.Windows.Forms.LinkLabel ir_cadastro;
         private System.Windows.Forms.LinkLabel ed_conta;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

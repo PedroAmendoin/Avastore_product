@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(casa));
             this.mic = new System.Windows.Forms.Button();
             this.quarto = new System.Windows.Forms.Button();
             this.cozinha = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.temp_cozinha = new System.Windows.Forms.Button();
             this.temp_sala = new System.Windows.Forms.Button();
             this.temp_banheiro = new System.Windows.Forms.Button();
+            this.cam_se = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mic
@@ -139,12 +141,25 @@
             this.temp_banheiro.Visible = false;
             this.temp_banheiro.Click += new System.EventHandler(this.temp_banheiro_Click);
             // 
+            // cam_se
+            // 
+            this.cam_se.BackColor = System.Drawing.Color.White;
+            this.cam_se.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cam_se.BackgroundImage")));
+            this.cam_se.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cam_se.Location = new System.Drawing.Point(636, 244);
+            this.cam_se.Name = "cam_se";
+            this.cam_se.Size = new System.Drawing.Size(28, 28);
+            this.cam_se.TabIndex = 9;
+            this.cam_se.UseVisualStyleBackColor = false;
+            this.cam_se.Click += new System.EventHandler(this.cam_se_Click);
+            // 
             // casa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cam_se);
             this.Controls.Add(this.temp_banheiro);
             this.Controls.Add(this.temp_sala);
             this.Controls.Add(this.temp_cozinha);
@@ -172,5 +187,6 @@
         private System.Windows.Forms.Button temp_cozinha;
         private System.Windows.Forms.Button temp_sala;
         private System.Windows.Forms.Button temp_banheiro;
+        private System.Windows.Forms.Button cam_se;
     }
 }

@@ -297,5 +297,11 @@ namespace Ava
         {
 
         }
+
+        private void cam_se_Click(object sender, EventArgs e)
+        {
+            Cam_1 gocamera = new Cam_1();
+            gocamera.ShowDialog();
+        }
     }
 }

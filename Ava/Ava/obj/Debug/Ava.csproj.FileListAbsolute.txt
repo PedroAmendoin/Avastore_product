@@ -57,3 +57,4 @@ D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.Numerics.Vec
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.Cadastrar.resources
+D:\Meus Documentos\GitHub\Avastore_product\Ava\Ava\obj\Debug\Ava.Cam_1.resources

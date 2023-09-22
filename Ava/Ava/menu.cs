@@ -120,14 +120,14 @@ namespace Ava
             }
 
 
-            else if (frase.Equals("boa noite eiva"))
+            else if (frase.Equals("boa noite"))
             {
                 resposta.SpeakAsync("boa noite");
             }
 
             else if (frase.Equals("tudo bem?"))
             {
-                resposta.SpeakAsync("Tudo perfeito, e contigo?");
+                resposta.SpeakAsync("funcionando");
             }
 
             else if (frase.Equals("estou bem"))
@@ -138,6 +138,7 @@ namespace Ava
             else if (frase.Equals("gugou"))
             {
 
+                resposta.SpeakAsync("abrindo gugou");
                 string target = "https://www.google.com.br/";
                 System.Diagnostics.Process.Start(target);
 
@@ -145,6 +146,7 @@ namespace Ava
 
             else if (frase.Equals("iutube"))
             {
+                resposta.SpeakAsync("abrindo iutube");
                 string target = "http://www.youtube.com";
                 System.Diagnostics.Process.Start(target);
             }
@@ -161,6 +163,7 @@ namespace Ava
 
             else if (frase.Equals("minha casa"))
             {
+                resposta.SpeakAsync("abrindo sistema");
                 this.Visible = false;
                 casa gocomodo = new casa();
                 gocomodo.ShowDialog();
