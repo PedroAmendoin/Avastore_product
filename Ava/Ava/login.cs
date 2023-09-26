@@ -132,12 +132,74 @@ namespace Ava
 
         private void ed_conta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Edicao_cnt goedicao = new Edicao_cnt();
+            goedicao.ShowDialog();
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        private void Usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tecla enter
+            if (e.KeyChar == 13)
+            {
+                Senha.Focus();
+            }
+
+        }
+
+        private void Senha_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+
+                //tecla enter
+                if (e.KeyChar == 13)
+                {
+                    //sua rotina aqui
+                    Entrar.Focus();
+
+                    e.Handled = true;
+
+                }
+            }
+
+
+        //receber seta para baixo
+        private void Usuario_KeyDown(object sender, KeyEventArgs e)
+        { 
+            if (e.KeyCode == Keys.Down)
+            {
+               Senha.Focus(); 
+            }
+            
+        }
+
+        //receber seta para cima
+        private void Senha_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                Usuario.Focus();
+            }
+           
+        }
+
+        private void Senha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                Entrar.Focus();
+            }
+        }
+
+        private void Entrar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                Senha.Focus();
+            }
         }
     }
 

@@ -27,7 +27,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor2;
         SpeechSynthesizer resposta2 = new SpeechSynthesizer();
 
-        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou bem", "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "pesquisa", "obrigado" };
+        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou bem", "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "pesquisa","câmera", "obrigado" };
 
         public casa()
         {
@@ -90,6 +90,25 @@ namespace Ava
 
             string frase = e.Result.Text;
 
+            if (frase.Length.Equals(null) == false)
+            {
+                MyAsyncMethod();
+
+            }
+
+
+            async Task MyAsyncMethod()
+            {
+                mic.BackColor = Color.Purple;
+                mic.ForeColor = Color.White;
+
+                await Task.Delay(5000);
+
+                mic.BackColor = Color.White;
+                mic.ForeColor = Color.Black;
+            }
+
+
             if (frase.Equals("olá"))
             {
                 resposta2.SpeakAsync("olá usuário, como posso ajudar?");
@@ -123,107 +142,97 @@ namespace Ava
             }
 
 
-            else if (mic.Focus() == true && !frase.Equals("pesquisa"))
+            //quarto;
+            if (frase.Equals("acender luz do quarto"))
             {
-
-
-                //quarto;
-                if (frase.Equals("acender luz do quarto"))
-                {
-                    quarto.BackColor = Color.Yellow;
-                }
-                else if(frase.Equals("apagar luz do quarto"))
-                {
-                    quarto.BackColor = Color.Gray;
-                }
-
-
-                else if (frase.Equals("temperatura do quarto"))
-                {
-                    temp_quarto.Text = tempQ;
-                    temp_quarto.Show();
-                }
-                else if (frase.Equals("fechar temperatura do quarto"))
-                {
-                    temp_quarto.Hide();
-                }
-
-
-                //cozinha;
-
-                else if (frase.Equals("acender luz da cozinha"))
-                {
-                    cozinha.BackColor = Color.Yellow;
-                }
-                else if (frase.Equals("apagar luz da cozinha"))
-                {
-                    cozinha.BackColor = Color.Gray;
-                }
-
-
-                else if (frase.Equals("temperatura da cozinha"))
-                {
-                    temp_cozinha.Text = tempC;
-                    temp_cozinha.Show();
-                }
-                else if (frase.Equals("fechar temperatura da cozinha"))
-                {
-                    temp_cozinha.Hide();
-                }
-
-
-                //sala;
-
-                else if (frase.Equals("acender luz da sala"))
-                {
-                    sala.BackColor = Color.Yellow;
-                }
-                else if (frase.Equals("apagar luz da sala"))
-                {
-                    sala.BackColor = Color.Gray;
-                }
-
-
-                else if (frase.Equals("temperatura da sala"))
-                {
-                    temp_sala.Text = tempS;
-                    temp_sala.Show();
-                }
-                else if (frase.Equals("fechar temperatura da sala"))
-                {
-                    temp_sala.Hide();
-                }
-
-
-                //banheiro;
-
-                else if (frase.Equals("acender luz do banheiro"))
-                {
-                    banheiro.BackColor = Color.Yellow;
-                }
-                else if (frase.Equals("apagar luz do banheiro"))
-                {
-                    banheiro.BackColor = Color.Gray;
-                }
-
-
-                else if (frase.Equals("temperatura do banheiro"))
-                {
-                    temp_banheiro.Text = tempB;
-                    temp_banheiro.Show();
-                }
-                else if (frase.Equals("fechar temperatura do banheiro"))
-                {
-                    temp_banheiro.Hide();
-                }
-
-                //muda a cor do botâo de recepção de áudio
-
-                mic.BackColor = Color.White;
-                mic.ForeColor = Color.Black;
-
-
+                quarto.BackColor = Color.Yellow;
             }
+            else if (frase.Equals("apagar luz do quarto"))
+            {
+                quarto.BackColor = Color.Gray;
+            }
+
+
+            else if (frase.Equals("temperatura do quarto"))
+            {
+                temp_quarto.Text = tempQ;
+                temp_quarto.Show();
+            }
+            else if (frase.Equals("fechar temperatura do quarto"))
+            {
+                temp_quarto.Hide();
+            }
+
+
+            //cozinha;
+
+            else if (frase.Equals("acender luz da cozinha"))
+            {
+                cozinha.BackColor = Color.Yellow;
+            }
+            else if (frase.Equals("apagar luz da cozinha"))
+            {
+                cozinha.BackColor = Color.Gray;
+            }
+
+
+            else if (frase.Equals("temperatura da cozinha"))
+            {
+                temp_cozinha.Text = tempC;
+                temp_cozinha.Show();
+            }
+            else if (frase.Equals("fechar temperatura da cozinha"))
+            {
+                temp_cozinha.Hide();
+            }
+
+
+            //sala;
+
+            else if (frase.Equals("acender luz da sala"))
+            {
+                sala.BackColor = Color.Yellow;
+            }
+            else if (frase.Equals("apagar luz da sala"))
+            {
+                sala.BackColor = Color.Gray;
+            }
+
+
+            else if (frase.Equals("temperatura da sala"))
+            {
+                temp_sala.Text = tempS;
+                temp_sala.Show();
+            }
+            else if (frase.Equals("fechar temperatura da sala"))
+            {
+                temp_sala.Hide();
+            }
+
+
+            //banheiro;
+
+            else if (frase.Equals("acender luz do banheiro"))
+            {
+                banheiro.BackColor = Color.Yellow;
+            }
+            else if (frase.Equals("apagar luz do banheiro"))
+            {
+                banheiro.BackColor = Color.Gray;
+            }
+
+
+            else if (frase.Equals("temperatura do banheiro"))
+            {
+                temp_banheiro.Text = tempB;
+                temp_banheiro.Show();
+            }
+            else if (frase.Equals("fechar temperatura do banheiro"))
+            {
+                temp_banheiro.Hide();
+            }
+
+        
 
             else if (frase.Equals("pesquisa"))
             {
@@ -232,7 +241,15 @@ namespace Ava
                
             }
 
-            else if (frase.Equals("obrigado") && mic.Focus()!=true)
+            else if (frase.Equals("câmera"))
+            {
+                this.Visible = false;
+                Cam_1 gocam = new Cam_1();
+                gocam.ShowDialog();
+                this.Visible = true;
+            }
+
+            else if (frase.Equals("obrigado"))
             {
                 resposta2.SpeakAsync("disponha");
             }
@@ -300,8 +317,7 @@ namespace Ava
 
         private void cam_se_Click(object sender, EventArgs e)
         {
-            Cam_1 gocamera = new Cam_1();
-            gocamera.ShowDialog();
+
         }
     }
 }

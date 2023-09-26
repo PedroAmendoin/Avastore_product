@@ -44,9 +44,9 @@
             // 
             // Entrar
             // 
-            this.Entrar.Location = new System.Drawing.Point(378, 274);
+            this.Entrar.Location = new System.Drawing.Point(355, 280);
             this.Entrar.Name = "Entrar";
-            this.Entrar.Size = new System.Drawing.Size(75, 23);
+            this.Entrar.Size = new System.Drawing.Size(77, 23);
             this.Entrar.TabIndex = 11;
             this.Entrar.Text = "Entrar";
             this.Entrar.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@
             // 
             // Senha
             // 
-            this.Senha.Location = new System.Drawing.Point(286, 232);
+            this.Senha.Location = new System.Drawing.Point(272, 229);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(250, 20);
             this.Senha.TabIndex = 8;
@@ -62,24 +62,29 @@
             this.Senha.Click += new System.EventHandler(this.Senha_Click);
             this.Senha.TextChanged += new System.EventHandler(this.Senha_TextChanged);
             this.Senha.DragOver += new System.Windows.Forms.DragEventHandler(this.Senha_DragOver);
+            this.Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyDown);
+            this.Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Senha_KeyPress);
+            this.Senha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyUp);
             this.Senha.MouseLeave += new System.EventHandler(this.Senha_MouseLeave);
             // 
             // Usuario
             // 
-            this.Usuario.Location = new System.Drawing.Point(286, 193);
+            this.Usuario.Location = new System.Drawing.Point(272, 193);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(250, 20);
             this.Usuario.TabIndex = 7;
             this.Usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Usuario.Click += new System.EventHandler(this.Usuario_Click);
             this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
+            this.Usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyDown);
+            this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
             this.Usuario.MouseLeave += new System.EventHandler(this.Usuario_MouseLeave);
             this.Usuario.MouseHover += new System.EventHandler(this.Usuario_MouseHover);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(225, 193);
+            this.label1.Location = new System.Drawing.Point(220, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 12;
@@ -89,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 232);
+            this.label2.Location = new System.Drawing.Point(220, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 13;
@@ -101,7 +106,7 @@
             this.ir_cadastro.AutoSize = true;
             this.ir_cadastro.BackColor = System.Drawing.Color.Yellow;
             this.ir_cadastro.LinkColor = System.Drawing.Color.Black;
-            this.ir_cadastro.Location = new System.Drawing.Point(389, 319);
+            this.ir_cadastro.Location = new System.Drawing.Point(371, 320);
             this.ir_cadastro.Name = "ir_cadastro";
             this.ir_cadastro.Size = new System.Drawing.Size(52, 13);
             this.ir_cadastro.TabIndex = 14;
@@ -115,7 +120,7 @@
             this.ed_conta.BackColor = System.Drawing.Color.Yellow;
             this.ed_conta.ForeColor = System.Drawing.Color.Black;
             this.ed_conta.LinkColor = System.Drawing.Color.Black;
-            this.ed_conta.Location = new System.Drawing.Point(398, 353);
+            this.ed_conta.Location = new System.Drawing.Point(380, 354);
             this.ed_conta.Name = "ed_conta";
             this.ed_conta.Size = new System.Drawing.Size(34, 13);
             this.ed_conta.TabIndex = 15;
@@ -133,7 +138,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(378, 101);
+            this.pictureBox2.Location = new System.Drawing.Point(355, 101);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(77, 72);
             this.pictureBox2.TabIndex = 17;
@@ -143,7 +148,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox2);
