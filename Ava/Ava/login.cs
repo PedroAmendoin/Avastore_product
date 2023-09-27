@@ -57,6 +57,8 @@ namespace Ava
                 this.Visible = false;
                 menu go_menu = new menu();
                 go_menu.ShowDialog();
+                Usuario.Text = null;//esvaziando textbox do usuario
+                Senha.Text = null;//esvaziando textbox da senha
                 this.Visible = true;
 
             }
@@ -67,12 +69,12 @@ namespace Ava
 
         private void Senha_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Usuario_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -86,8 +88,9 @@ namespace Ava
            this.Visible = false;
             Cadastrar gocadastrar = new Cadastrar();
             gocadastrar.ShowDialog();
-            this.Visible = true;
             
+            this.Visible = true;
+           
         }
 
         private void Usuario_MouseHover(object sender, EventArgs e)

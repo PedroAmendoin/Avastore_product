@@ -13,6 +13,9 @@ using System.Globalization;
 using System.Diagnostics;
 using System.Net.WebSockets;
 using System.Threading;
+using Controller;
+using Modelo;
+using MySql.Data.MySqlClient;
 
 namespace Ava
 {
@@ -106,7 +109,7 @@ namespace Ava
                
             if (frase.Equals("olá"))
             {
-                resposta.SpeakAsync("olá usuário, como posso ajudar?");
+                resposta.SpeakAsync("olá, como posso ajudar?");
             }
 
             else if (frase.Equals("obrigado"))
@@ -183,7 +186,7 @@ namespace Ava
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-
+        
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

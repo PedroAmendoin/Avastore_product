@@ -35,8 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Entrar = new System.Windows.Forms.Button();
             this.Voltar = new System.Windows.Forms.Button();
+            this.Entrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Apelido
@@ -99,16 +99,6 @@
             this.label3.Text = "Senha:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Entrar
-            // 
-            this.Entrar.Location = new System.Drawing.Point(365, 317);
-            this.Entrar.Name = "Entrar";
-            this.Entrar.Size = new System.Drawing.Size(75, 23);
-            this.Entrar.TabIndex = 6;
-            this.Entrar.Text = "Entrar";
-            this.Entrar.UseVisualStyleBackColor = true;
-            this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
-            // 
             // Voltar
             // 
             this.Voltar.Location = new System.Drawing.Point(55, 83);
@@ -118,6 +108,16 @@
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = true;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
+            // Entrar
+            // 
+            this.Entrar.Location = new System.Drawing.Point(365, 317);
+            this.Entrar.Name = "Entrar";
+            this.Entrar.Size = new System.Drawing.Size(75, 23);
+            this.Entrar.TabIndex = 6;
+            this.Entrar.Text = "Entrar";
+            this.Entrar.UseVisualStyleBackColor = true;
+            this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
             // 
             // Cadastrar
             // 
@@ -135,6 +135,7 @@
             this.Controls.Add(this.Senha);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.Apelido);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cadastrar";
             this.Text = "login";
@@ -152,7 +153,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Entrar;
         private System.Windows.Forms.Button Voltar;
+        private System.Windows.Forms.Button Entrar;
     }
 }
