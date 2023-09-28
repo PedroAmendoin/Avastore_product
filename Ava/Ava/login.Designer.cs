@@ -33,12 +33,14 @@
             this.Entrar = new System.Windows.Forms.Button();
             this.Senha = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.ir_cadastro = new System.Windows.Forms.LinkLabel();
             this.ed_conta = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Apelido = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             // 
             // Usuario
             // 
-            this.Usuario.Location = new System.Drawing.Point(272, 193);
+            this.Usuario.Location = new System.Drawing.Point(272, 203);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(250, 20);
             this.Usuario.TabIndex = 7;
@@ -78,28 +80,9 @@
             this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyDown);
             this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
+            this.Usuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyUp);
             this.Usuario.MouseLeave += new System.EventHandler(this.Usuario_MouseLeave);
             this.Usuario.MouseHover += new System.EventHandler(this.Usuario_MouseHover);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(220, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Usuário:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 232);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Senha:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ir_cadastro
             // 
@@ -144,6 +127,50 @@
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
+            // Apelido
+            // 
+            this.Apelido.Location = new System.Drawing.Point(272, 179);
+            this.Apelido.Name = "Apelido";
+            this.Apelido.Size = new System.Drawing.Size(250, 20);
+            this.Apelido.TabIndex = 18;
+            this.Apelido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Apelido.Click += new System.EventHandler(this.Apelido_Click);
+            this.Apelido.TextChanged += new System.EventHandler(this.Apelido_TextChanged);
+            this.Apelido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Apelido_KeyDown);
+            this.Apelido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Apelido_KeyPress);
+            this.Apelido.MouseLeave += new System.EventHandler(this.Apelido_MouseLeave);
+            this.Apelido.MouseHover += new System.EventHandler(this.Apelido_MouseHover);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(214, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Apelido:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(214, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Usuario:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(214, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Senha:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,14 +179,17 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Apelido);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ed_conta);
             this.Controls.Add(this.ir_cadastro);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Entrar);
             this.Controls.Add(this.Senha);
             this.Controls.Add(this.Usuario);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
@@ -175,11 +205,13 @@
         private System.Windows.Forms.Button Entrar;
         private System.Windows.Forms.TextBox Senha;
         private System.Windows.Forms.TextBox Usuario;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel ir_cadastro;
         private System.Windows.Forms.LinkLabel ed_conta;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox Apelido;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

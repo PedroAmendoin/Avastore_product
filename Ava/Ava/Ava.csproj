@@ -119,7 +119,7 @@
       <DependentUpon>casa.cs</DependentUpon>
     </Compile>
     <Compile Include="conexao.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="UsuarioController.cs" />
     <Compile Include="Cadastrar.cs">
       <SubType>Form</SubType>
     </Compile>

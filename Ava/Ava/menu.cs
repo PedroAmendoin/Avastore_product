@@ -16,23 +16,31 @@ using System.Threading;
 using Controller;
 using Modelo;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto;
 
 namespace Ava
 {
 
+   
     public partial class menu : Form
-    {
+    { 
+        
+
         static CultureInfo ci = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
         public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "gugou", "iutube","minha casa","loguin", "obrigado" };
-       
-        public menu()
+       LoginModelo logmodelo = new LoginModelo();
+        public menu(LoginModelo usuario)
         {
+            logmodelo = usuario;
             InitializeComponent();
             init();
+            
         }
+
+     
 
         public void Gramatica()
         {
@@ -84,6 +92,8 @@ namespace Ava
             Gramatica();
         }
 
+
+
         void Sre_Reconhecimento(object sender, SpeechRecognizedEventArgs e)
         {
 
@@ -106,10 +116,12 @@ namespace Ava
                 mic.BackColor = Color.White;
                 mic.ForeColor = Color.Black;
                 }
-               
+              
             if (frase.Equals("olá"))
             {
-                resposta.SpeakAsync("olá, como posso ajudar?");
+                 
+                 resposta.SpeakAsync("olá "+logmodelo.apelido +", como posso ajudar");
+                
             }
 
             else if (frase.Equals("obrigado"))
@@ -186,7 +198,12 @@ namespace Ava
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-        
+           
+
+                apelido.Text = logmodelo.apelido;//esvaziando textbox do usuario
+                
+            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -207,6 +224,21 @@ namespace Ava
         private void mic_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void apelido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void perfil_Click(object sender, EventArgs e)
+        {
+            apelido.Visible = true;
+        }
+
+        private void perfil_MouseLeave(object sender, EventArgs e)
+        {
+            apelido.Visible = false;
         }
     }
 }

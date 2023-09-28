@@ -73,12 +73,9 @@ namespace Ava
                 {
                     if (uscontrole.cadastrar(gravadado) == true)
                     {
-                        MessageBox.Show("Usuário" + Usuario.Text + "cadastrado com sucesso");
+                        MessageBox.Show("Usuário " + Usuario.Text + " cadastrado com sucesso");
 
-                        //para a próxima tela
-                        this.Hide();
-                        menu gomenu = new menu();
-                        DialogResult = gomenu.ShowDialog();
+                        //fechar tela
                         this.Close();
                     }
                     else
