@@ -157,7 +157,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cam_se);
             this.Controls.Add(this.temp_banheiro);
@@ -169,6 +171,7 @@
             this.Controls.Add(this.cozinha);
             this.Controls.Add(this.quarto);
             this.Controls.Add(this.mic);
+            this.DoubleBuffered = true;
             this.Name = "casa";
             this.Text = "cômodo";
             this.Load += new System.EventHandler(this.cômodo_Load);
