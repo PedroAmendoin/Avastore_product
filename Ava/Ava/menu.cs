@@ -110,11 +110,13 @@ namespace Ava
                 {
                      mic.BackColor = Color.Purple;
                 mic.ForeColor = Color.White;
+                mic.Text = "ouvindo";
 
                 await Task.Delay(5000);
 
                 mic.BackColor = Color.White;
                 mic.ForeColor = Color.Black;
+                mic.Text = "mic";
                 }
               
             if (frase.Equals("olá"))

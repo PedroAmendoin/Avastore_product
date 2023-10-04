@@ -33,6 +33,8 @@
             this.clock = new System.Windows.Forms.Button();
             this.cam_img = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.sala_esc = new System.Windows.Forms.Button();
+            this.visao_not = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tim3
@@ -80,6 +82,27 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // sala_esc
+            // 
+            this.sala_esc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sala_esc.BackgroundImage")));
+            this.sala_esc.Location = new System.Drawing.Point(0, 0);
+            this.sala_esc.Name = "sala_esc";
+            this.sala_esc.Size = new System.Drawing.Size(803, 451);
+            this.sala_esc.TabIndex = 6;
+            this.sala_esc.UseVisualStyleBackColor = true;
+            this.sala_esc.Visible = false;
+            // 
+            // visao_not
+            // 
+            this.visao_not.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("visao_not.BackgroundImage")));
+            this.visao_not.Location = new System.Drawing.Point(0, 0);
+            this.visao_not.Name = "visao_not";
+            this.visao_not.Size = new System.Drawing.Size(803, 451);
+            this.visao_not.TabIndex = 7;
+            this.visao_not.UseVisualStyleBackColor = true;
+            this.visao_not.Visible = false;
+            this.visao_not.Click += new System.EventHandler(this.visao_not_Click);
+            // 
             // Cam_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +113,8 @@
             this.Controls.Add(this.clock);
             this.Controls.Add(this.tim3);
             this.Controls.Add(this.cam_img);
+            this.Controls.Add(this.sala_esc);
+            this.Controls.Add(this.visao_not);
             this.DoubleBuffered = true;
             this.Name = "Cam_1";
             this.Text = "Cam_1";
@@ -104,5 +129,7 @@
         private System.Windows.Forms.Button clock;
         private System.Windows.Forms.Button cam_img;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sala_esc;
+        private System.Windows.Forms.Button visao_not;
     }
 }

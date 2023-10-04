@@ -41,19 +41,21 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(50, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(694, 416);
+            this.pictureBox1.Size = new System.Drawing.Size(620, 402);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // mic
             // 
-            this.mic.Location = new System.Drawing.Point(576, 287);
+            this.mic.Location = new System.Drawing.Point(296, 440);
             this.mic.Name = "mic";
-            this.mic.Size = new System.Drawing.Size(75, 23);
+            this.mic.Size = new System.Drawing.Size(201, 34);
             this.mic.TabIndex = 3;
             this.mic.Text = "mic";
             this.mic.UseVisualStyleBackColor = true;
@@ -62,8 +64,9 @@
             // apelido
             // 
             this.apelido.AutoSize = true;
-            this.apelido.ForeColor = System.Drawing.Color.White;
-            this.apelido.Location = new System.Drawing.Point(62, 100);
+            this.apelido.BackColor = System.Drawing.Color.White;
+            this.apelido.ForeColor = System.Drawing.Color.Black;
+            this.apelido.Location = new System.Drawing.Point(595, 449);
             this.apelido.Name = "apelido";
             this.apelido.Size = new System.Drawing.Size(0, 13);
             this.apelido.TabIndex = 4;
@@ -76,7 +79,7 @@
             this.perfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("perfil.BackgroundImage")));
             this.perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.perfil.Location = new System.Drawing.Point(82, 62);
+            this.perfil.Location = new System.Drawing.Point(557, 440);
             this.perfil.Name = "perfil";
             this.perfil.Size = new System.Drawing.Size(32, 30);
             this.perfil.TabIndex = 5;

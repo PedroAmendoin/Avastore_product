@@ -13,6 +13,7 @@ using System.Globalization;
 using System.Diagnostics;
 using System.Net.WebSockets;
 
+
 namespace Ava
 {
 
@@ -22,6 +23,8 @@ namespace Ava
         string tempC = "22°C";
         string tempS = "22°C";
         string tempB = "22°C";
+
+        int luz = 1;
 
         static CultureInfo co = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor2;
@@ -188,14 +191,17 @@ namespace Ava
 
 
             //sala;
+            
 
             else if (frase.Equals("acender luz da sala"))
             {
                 sala.BackColor = Color.Yellow;
+                luz = 1;
             }
             else if (frase.Equals("apagar luz da sala"))
             {
                 sala.BackColor = Color.Gray;
+                luz = 2;
             }
 
 
@@ -243,10 +249,13 @@ namespace Ava
 
             else if (frase.Equals("câmera"))
             {
+               
                 this.Visible = false;
                 Cam_1 gocam = new Cam_1();
                 gocam.ShowDialog();
                 this.Visible = true;
+               
+
             }
 
             else if (frase.Equals("obrigado"))

@@ -22,7 +22,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor3;
         SpeechSynthesizer resposta3 = new SpeechSynthesizer();
 
-        public string[] listaPalavras3 = { "voltar" };
+        public string[] listaPalavras3 = { "voltar", "visão noturna"};
 
         public Cam_1()
         {
@@ -144,6 +144,9 @@ namespace Ava
             
         }
 
-     
+        private void visao_not_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
