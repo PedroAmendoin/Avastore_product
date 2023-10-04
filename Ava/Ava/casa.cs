@@ -152,7 +152,7 @@ namespace Ava
             }
             else if (frase.Equals("apagar luz do quarto"))
             {
-                quarto.BackColor = Color.Gray;
+                quarto.BackColor = Color.Gainsboro;
             }
 
 
@@ -175,7 +175,7 @@ namespace Ava
             }
             else if (frase.Equals("apagar luz da cozinha"))
             {
-                cozinha.BackColor = Color.Gray;
+                cozinha.BackColor = Color.Gainsboro;
             }
 
 
@@ -200,7 +200,7 @@ namespace Ava
             }
             else if (frase.Equals("apagar luz da sala"))
             {
-                sala.BackColor = Color.Gray;
+                sala.BackColor = Color.Gainsboro;
                 luz = 2;
             }
 
@@ -224,7 +224,7 @@ namespace Ava
             }
             else if (frase.Equals("apagar luz do banheiro"))
             {
-                banheiro.BackColor = Color.Gray;
+                banheiro.BackColor = Color.Gainsboro;
             }
 
 

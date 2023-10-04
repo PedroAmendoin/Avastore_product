@@ -53,42 +53,46 @@
             // 
             // quarto
             // 
+            this.quarto.BackColor = System.Drawing.Color.Gainsboro;
             this.quarto.Location = new System.Drawing.Point(181, 87);
             this.quarto.Name = "quarto";
             this.quarto.Size = new System.Drawing.Size(135, 57);
             this.quarto.TabIndex = 1;
             this.quarto.Text = "quarto";
-            this.quarto.UseVisualStyleBackColor = true;
+            this.quarto.UseVisualStyleBackColor = false;
             this.quarto.Click += new System.EventHandler(this.quarto_Click);
             // 
             // cozinha
             // 
+            this.cozinha.BackColor = System.Drawing.Color.Gainsboro;
             this.cozinha.Location = new System.Drawing.Point(473, 87);
             this.cozinha.Name = "cozinha";
             this.cozinha.Size = new System.Drawing.Size(132, 57);
             this.cozinha.TabIndex = 2;
             this.cozinha.Text = "cozinha";
-            this.cozinha.UseVisualStyleBackColor = true;
+            this.cozinha.UseVisualStyleBackColor = false;
             this.cozinha.Click += new System.EventHandler(this.cozinha_Click);
             // 
             // sala
             // 
+            this.sala.BackColor = System.Drawing.Color.Gainsboro;
             this.sala.Location = new System.Drawing.Point(473, 244);
             this.sala.Name = "sala";
             this.sala.Size = new System.Drawing.Size(132, 55);
             this.sala.TabIndex = 3;
             this.sala.Text = "sala de estar";
-            this.sala.UseVisualStyleBackColor = true;
+            this.sala.UseVisualStyleBackColor = false;
             this.sala.Click += new System.EventHandler(this.sala_Click);
             // 
             // banheiro
             // 
+            this.banheiro.BackColor = System.Drawing.Color.Gainsboro;
             this.banheiro.Location = new System.Drawing.Point(181, 244);
             this.banheiro.Name = "banheiro";
             this.banheiro.Size = new System.Drawing.Size(135, 55);
             this.banheiro.TabIndex = 4;
             this.banheiro.Text = "banheiro";
-            this.banheiro.UseVisualStyleBackColor = true;
+            this.banheiro.UseVisualStyleBackColor = false;
             this.banheiro.Click += new System.EventHandler(this.banheiro_Click);
             // 
             // temp_quarto
