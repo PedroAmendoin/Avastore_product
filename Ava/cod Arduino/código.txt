@@ -1,0 +1,45 @@
+
+#include <Servo.h>
+Servo teste;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(8, OUTPUT);
+Serial.begin(9600); //INICIALIZA A SERIAL COM TAXA DE 9600 BAUDS
+teste.attach(8);
+
+}
+
+void loop() {
+  if (Serial.available()) //se byte pronto para leitura
+   {
+
+    char c = Serial.read(); //VARIÁVEL RESPONSÁVEL POR RECEBER O CARACTER DIGITADO NA ENTRADA DE DADOS DO MONITOR SERIAL
+ 
+    if (c == 'b'){ //SE CARACTER DIGITADO FOR IGUAL A "b", FAZ
+   
+  teste.write(120);
+  delay(1500);
+  
+  teste.write(0);
+  delay(1500);
+
+teste.write(120);
+  delay(1500);
+  
+  teste.write(0);
+  delay(1500);
+
+  teste.write(120);
+  delay(1500);
+  
+  teste.write(0);
+  delay(1500);
+ 
+   }else{
+    teste.write(0);
+    delay(1500);
+   }
+    }// put your main code here, to run repeatedly:
+
+   }   

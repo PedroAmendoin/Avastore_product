@@ -35,6 +35,10 @@
             this.apelido = new System.Windows.Forms.Label();
             this.perfil = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btConectar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.timerCOM = new System.Windows.Forms.Timer(this.components);
+            this.serialPort = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +91,30 @@
             this.perfil.Click += new System.EventHandler(this.perfil_Click);
             this.perfil.MouseLeave += new System.EventHandler(this.perfil_MouseLeave);
             // 
+            // btConectar
+            // 
+            this.btConectar.Location = new System.Drawing.Point(8, 109);
+            this.btConectar.Name = "btConectar";
+            this.btConectar.Size = new System.Drawing.Size(75, 23);
+            this.btConectar.TabIndex = 6;
+            this.btConectar.Text = "conectar";
+            this.btConectar.UseVisualStyleBackColor = true;
+            this.btConectar.Click += new System.EventHandler(this.btConectar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(101, 109);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // timerCOM
+            // 
+            this.timerCOM.Interval = 1000;
+            this.timerCOM.Tick += new System.EventHandler(this.timerCOM_Tick);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,6 +123,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btConectar);
             this.Controls.Add(this.perfil);
             this.Controls.Add(this.apelido);
             this.Controls.Add(this.mic);
@@ -103,7 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -118,6 +148,10 @@
         private System.Windows.Forms.Label apelido;
         private System.Windows.Forms.Button perfil;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btConectar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Timer timerCOM;
+        private System.IO.Ports.SerialPort serialPort;
     }
 }
 

@@ -17,15 +17,108 @@ using Controller;
 using Modelo;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Crypto;
+using System.IO.Ports; // necessário para ter acesso as portas 
 
 namespace Ava
 {
 
    
     public partial class menu : Form
-    { 
+    {
         
 
+        private void atualizaListaCOMs()
+        {
+            int i;
+            bool quantDiferente;    //flag para sinalizar que a quantidade de portas mudou
+
+            i = 0;
+            quantDiferente = false;
+
+            //se a quantidade de portas mudou
+            if (comboBox1.Items.Count == SerialPort.GetPortNames().Length)
+            {
+                foreach (string s in SerialPort.GetPortNames())
+                {
+                    if (comboBox1.Items[i++].Equals(s) == false)
+                    {
+                        quantDiferente = true;
+                    }
+                }
+            }
+            else
+            {
+                quantDiferente = true;
+            }
+
+            //Se não foi detectado diferença
+            if (quantDiferente == false)
+            {
+                return;                     //retorna
+            }
+
+            //limpa comboBox
+            comboBox1.Items.Clear();
+
+            //adiciona todas as COM diponíveis na lista
+            foreach (string s in SerialPort.GetPortNames())
+            {
+                comboBox1.Items.Add(s);
+            }
+            //seleciona a primeira posição da lista
+            comboBox1.SelectedIndex = 0;
+        }
+        private void timerCOM_Tick(object sender, EventArgs e)
+        {
+            atualizaListaCOMs();
+        }
+
+        private void btConectar_Click(object sender, EventArgs e)
+        {
+            if (serialPort.IsOpen == false)
+            {
+                try
+                {
+                    serialPort.PortName = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+                    serialPort.Open();
+
+                }
+                catch
+                {
+                    return;
+
+                }
+                if (serialPort.IsOpen)
+                {
+                    btConectar.Text = "Desconectar";
+                    comboBox1.Enabled = false;
+
+                }
+            }
+            else
+            {
+
+                try
+                {
+                    serialPort.Close();
+                    comboBox1.Enabled = true;
+                    btConectar.Text = "Conectar";
+                }
+                catch
+                {
+                    return;
+                }
+            }
+        }
+
+        private void menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (serialPort.IsOpen == true)  // se porta aberta
+                serialPort.Close();            //fecha a porta
+        }//fim da parte do arduino;
+
+
+        //início do reconhecimento de voz;
         static CultureInfo ci = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
@@ -123,7 +216,10 @@ namespace Ava
             {
                  
                  resposta.SpeakAsync("olá "+logmodelo.apelido +", como posso ajudar");
-                
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+
             }
 
             else if (frase.Equals("obrigado"))
@@ -203,8 +299,8 @@ namespace Ava
            
 
                 apelido.Text = logmodelo.apelido;//esvaziando textbox do usuario
-                
-            
+                timerCOM.Enabled = true;
+
 
         }
 
@@ -242,5 +338,23 @@ namespace Ava
         {
             apelido.Visible = false;
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void textBoxEnviar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxReceber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
