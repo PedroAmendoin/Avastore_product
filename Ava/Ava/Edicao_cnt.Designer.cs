@@ -37,8 +37,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Senha_nova = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.concluir = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Enviar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(192, 302);
+            this.label3.Location = new System.Drawing.Point(192, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 11;
@@ -57,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(205, 263);
+            this.label2.Location = new System.Drawing.Point(219, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 10;
@@ -66,7 +68,7 @@
             // 
             // Senha
             // 
-            this.Senha.Location = new System.Drawing.Point(275, 263);
+            this.Senha.Location = new System.Drawing.Point(275, 256);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(250, 20);
             this.Senha.TabIndex = 8;
@@ -89,7 +91,7 @@
             "Excluir",
             "Alterar senha",
             "Recuperar senha"});
-            this.Procedimento_cb.Location = new System.Drawing.Point(339, 337);
+            this.Procedimento_cb.Location = new System.Drawing.Point(337, 360);
             this.Procedimento_cb.Name = "Procedimento_cb";
             this.Procedimento_cb.Size = new System.Drawing.Size(121, 21);
             this.Procedimento_cb.TabIndex = 12;
@@ -107,7 +109,7 @@
             // 
             // Senha_nova
             // 
-            this.Senha_nova.Location = new System.Drawing.Point(275, 302);
+            this.Senha_nova.Location = new System.Drawing.Point(275, 295);
             this.Senha_nova.Name = "Senha_nova";
             this.Senha_nova.Size = new System.Drawing.Size(250, 20);
             this.Senha_nova.TabIndex = 19;
@@ -117,25 +119,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 215);
+            this.label1.Location = new System.Drawing.Point(214, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Usuário:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // concluir
             // 
-            this.concluir.Location = new System.Drawing.Point(543, 302);
+            this.concluir.Location = new System.Drawing.Point(541, 295);
             this.concluir.Name = "concluir";
             this.concluir.Size = new System.Drawing.Size(54, 20);
             this.concluir.TabIndex = 22;
@@ -144,6 +137,37 @@
             this.concluir.Visible = false;
             this.concluir.Click += new System.EventHandler(this.concluir_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.Location = new System.Drawing.Point(275, 329);
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Size = new System.Drawing.Size(250, 20);
+            this.Codigo.TabIndex = 23;
+            this.Codigo.Visible = false;
+            this.Codigo.TextChanged += new System.EventHandler(this.Codigo_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(225, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Código:";
+            this.label4.Visible = false;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // Enviar
+            // 
+            this.Enviar.Location = new System.Drawing.Point(541, 329);
+            this.Enviar.Name = "Enviar";
+            this.Enviar.Size = new System.Drawing.Size(54, 23);
+            this.Enviar.TabIndex = 25;
+            this.Enviar.Text = "enviar";
+            this.Enviar.UseVisualStyleBackColor = true;
+            this.Enviar.Visible = false;
+            this.Enviar.Click += new System.EventHandler(this.Enviar_Click);
+            // 
             // Edicao_cnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,8 +175,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Enviar);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Codigo);
             this.Controls.Add(this.concluir);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Senha_nova);
             this.Controls.Add(this.pictureBox2);
@@ -182,7 +208,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox Senha_nova;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button concluir;
+        private System.Windows.Forms.TextBox Codigo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Enviar;
     }
 }

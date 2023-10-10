@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Voltar = new System.Windows.Forms.Button();
             this.Entrar = new System.Windows.Forms.Button();
+            this.codigo_rec = new System.Windows.Forms.Label();
+            this.Codigo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Apelido
@@ -111,13 +113,31 @@
             // 
             // Entrar
             // 
-            this.Entrar.Location = new System.Drawing.Point(365, 317);
+            this.Entrar.Location = new System.Drawing.Point(364, 344);
             this.Entrar.Name = "Entrar";
             this.Entrar.Size = new System.Drawing.Size(75, 23);
             this.Entrar.TabIndex = 6;
             this.Entrar.Text = "Entrar";
             this.Entrar.UseVisualStyleBackColor = true;
             this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
+            // 
+            // codigo_rec
+            // 
+            this.codigo_rec.AutoSize = true;
+            this.codigo_rec.Location = new System.Drawing.Point(222, 308);
+            this.codigo_rec.Name = "codigo_rec";
+            this.codigo_rec.Size = new System.Drawing.Size(42, 13);
+            this.codigo_rec.TabIndex = 8;
+            this.codigo_rec.Text = "código:";
+            this.codigo_rec.Click += new System.EventHandler(this.codigo_rec_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.Location = new System.Drawing.Point(281, 308);
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Size = new System.Drawing.Size(100, 20);
+            this.Codigo.TabIndex = 9;
+            this.Codigo.TextChanged += new System.EventHandler(this.Codigo_TextChanged);
             // 
             // Cadastrar
             // 
@@ -127,6 +147,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Codigo);
+            this.Controls.Add(this.codigo_rec);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Entrar);
             this.Controls.Add(this.label3);
@@ -135,6 +157,7 @@
             this.Controls.Add(this.Senha);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.Apelido);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cadastrar";
@@ -155,5 +178,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Voltar;
         private System.Windows.Forms.Button Entrar;
+        private System.Windows.Forms.Label codigo_rec;
+        private System.Windows.Forms.TextBox Codigo;
     }
 }

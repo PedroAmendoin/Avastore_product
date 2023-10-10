@@ -17,6 +17,7 @@ namespace Modelo
         public string apelido;
         public string usuario;
         public string senha;
+        public string codigo;
         
 
         public LoginModelo()
@@ -25,6 +26,7 @@ namespace Modelo
             apelido = null;
             usuario = null;
             senha = null;
+            codigo = null;
             
        
 

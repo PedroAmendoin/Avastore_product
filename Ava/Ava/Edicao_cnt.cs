@@ -58,9 +58,11 @@ namespace Ava
                         us.senha = Convert.ToString(registro["senha"]);
 
                         MySqlConnection cn = conexao.getconexao();
-                        string sql = "DELETE FROM cadastrar WHERE id_usuario =2 ";
+                        string sql = "DELETE FROM cadastrar WHERE usuario=@usuario AND senha=@senha";
                         cn.Open();
                         MySqlCommand cmd1 = new MySqlCommand(sql, cn);
+                        cmd1.Parameters.AddWithValue("@usuario", us.usuario);
+                        cmd1.Parameters.AddWithValue("@senha", us.senha);
                         cmd1.ExecuteNonQuery();
 
                         this.Visible = false;
@@ -87,7 +89,17 @@ namespace Ava
                 Senha_nova.Visible = false;
                 concluir.Visible = false;
             }
-        }
+
+            if (Procedimento_cb.Text == "Recuperar senha")
+            {
+                label2.Visible = false;
+                Senha.Visible = false;
+                Codigo.Visible = true;
+                Enviar.Visible = true;
+
+            }
+
+            }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -100,6 +112,11 @@ namespace Ava
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
@@ -119,6 +136,11 @@ namespace Ava
 
         }
 
+        private void Codigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -128,6 +150,7 @@ namespace Ava
         {
 
         }
+
 
         private void concluir_Click(object sender, EventArgs e)
         {
@@ -170,5 +193,45 @@ namespace Ava
 
             }
         }
+
+        private void Enviar_Click(object sender, EventArgs e)
+        {
+            conexao conexao3 = new conexao();
+            string logar = "SELECT * FROM cadastrar WHERE usuario=@usuario AND codigo=@codigo";
+            MySqlConnection cnx = conexao3.getconexao();
+
+            MySqlCommand cmd = new MySqlCommand(logar, cnx);
+            cnx.Open();
+
+            //comparando os dados do banco e do visual
+            cmd.Parameters.AddWithValue("@usuario", Usuario.Text);
+            cmd.Parameters.AddWithValue("@codigo", Codigo.Text);
+
+
+            MySqlDataReader registro = cmd.ExecuteReader(); //executa a consulta.
+            LoginModelo us = new LoginModelo(); //chamo a classe usuario modelo
+
+            if (registro.HasRows)
+            {
+                registro.Read();
+                us.usuario = Convert.ToString(registro["usuario"]);
+                us.codigo = Convert.ToString(registro["codigo"]);
+
+                MySqlConnection cn = conexao3.getconexao();
+                string sql = "SELECT senha FROM cadastrar WHERE codigo='321'";
+                cn.Open();
+                MySqlCommand cmd1 = new MySqlCommand(sql, cn);
+                cmd1.ExecuteNonQuery();
+                MessageBox.Show(" "+ (registro["senha"]) +" ");
+                this.Visible = false;
+                Login go_login = new Login();
+                go_login.ShowDialog();
+                Usuario.Text = null;//esvaziando textbox do usuario
+                Senha.Text = null;//esvaziando textbox da senha
+                this.Visible = true;
+
+            }
+        }
     }
-}
+    }
+

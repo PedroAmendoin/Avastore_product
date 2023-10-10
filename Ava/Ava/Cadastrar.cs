@@ -56,20 +56,21 @@ namespace Ava
 
         private void Entrar_Click(object sender, EventArgs e)
         {
-            if (!Apelido.Text.Equals(null) && !Usuario.Text.Equals(null) && !Senha.Text.Equals(null))
+            if (!Apelido.Text.Equals(null) && !Usuario.Text.Equals(null) && !Senha.Text.Equals(null) && !Codigo.Text.Equals(null))
             {
 
                 LoginModelo gravadado = new LoginModelo();
                 gravadado.apelido = Apelido.Text;
                 gravadado.usuario = Usuario.Text;
                 gravadado.senha = Senha.Text;
+                gravadado.codigo = Codigo.Text;
                 
 
 
 
                 UsuarioController uscontrole = new UsuarioController();
 
-                if (gravadado.apelido != "" && gravadado.usuario != "" && gravadado.senha != "")
+                if (gravadado.apelido != "" && gravadado.usuario != "" && gravadado.senha != "" && gravadado.codigo != "")
                 {
                     if (uscontrole.cadastrar(gravadado) == true)
                     {
@@ -114,6 +115,16 @@ namespace Ava
             this.Close();
             
            
+        }
+
+        private void codigo_rec_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Codigo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

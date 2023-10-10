@@ -21,7 +21,7 @@ namespace Controller
         public bool cadastrar(LoginModelo usuario)
         {
             bool resultado = false;
-            string sql = "insert into Cadastrar(apelido,usuario,senha)" + "values('" + usuario.apelido + "','" + usuario.usuario + "','" + usuario.senha +"')";
+            string sql = "insert into Cadastrar(apelido,usuario,senha,codigo)" + "values('" + usuario.apelido + "','" + usuario.usuario + "','" + usuario.senha + "','" + usuario.codigo +"')";
             MySqlConnection sqlCon = con.getconexao();
             sqlCon.Open();
             MySqlCommand cmd = new MySqlCommand(sql, sqlCon);
