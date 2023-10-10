@@ -91,22 +91,27 @@
             this.perfil.Click += new System.EventHandler(this.perfil_Click);
             this.perfil.MouseLeave += new System.EventHandler(this.perfil_MouseLeave);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // btConectar
             // 
-            this.btConectar.Location = new System.Drawing.Point(8, 109);
+            this.btConectar.Location = new System.Drawing.Point(114, 446);
             this.btConectar.Name = "btConectar";
-            this.btConectar.Size = new System.Drawing.Size(75, 23);
+            this.btConectar.Size = new System.Drawing.Size(61, 23);
             this.btConectar.TabIndex = 6;
             this.btConectar.Text = "conectar";
             this.btConectar.UseVisualStyleBackColor = true;
             this.btConectar.Click += new System.EventHandler(this.btConectar_Click);
+            this.btConectar.MouseHover += new System.EventHandler(this.btConectar_MouseHover);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 109);
+            this.comboBox1.Location = new System.Drawing.Point(181, 446);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(78, 21);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -123,8 +128,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btConectar);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.perfil);
             this.Controls.Add(this.apelido);
             this.Controls.Add(this.mic);

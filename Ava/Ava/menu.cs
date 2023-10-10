@@ -25,8 +25,8 @@ namespace Ava
    
     public partial class menu : Form
     {
-        
 
+        int pergN = 0;//conta o número de vezes que pergunto o nome da Eiva
         private void atualizaListaCOMs()
         {
             int i;
@@ -211,11 +211,11 @@ namespace Ava
                 mic.ForeColor = Color.Black;
                 mic.Text = "mic";
                 }
-              
+
             if (frase.Equals("olá"))
             {
-                 
-                 resposta.SpeakAsync("olá "+logmodelo.apelido +", como posso ajudar");
+
+                resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
@@ -225,33 +225,65 @@ namespace Ava
             else if (frase.Equals("obrigado"))
             {
                 resposta.SpeakAsync("disponha");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
             }
 
             else if (frase.Equals("qual é o seu nome"))
             {
-                resposta.SpeakAsync("meu nome é eiva");
+                pergN = pergN + 1;
+
+                if (pergN == 1) {
+                    resposta.SpeakAsync("meu nome é eiva");
+                }
+                else if (pergN == 2)
+                {
+                    resposta.SpeakAsync("última vez que eu digo, meu nome é eiva");
+                }
+                else if (pergN > 2)
+                {
+                    resposta.SpeakAsync("você já sabe");
+                }
+
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
             }
 
 
-            else if (frase.Equals("boa noite"))
+            else if (frase.Equals("boa noite eiva"))
             {
                 resposta.SpeakAsync("boa noite");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+
             }
 
             else if (frase.Equals("tudo bem?"))
             {
-                resposta.SpeakAsync("funcionando");
+                resposta.SpeakAsync("estou em bom funcionamento");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
             }
 
             else if (frase.Equals("estou bem"))
             {
                 resposta.SpeakAsync("bom saber!");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
             }
 
             else if (frase.Equals("gugou"))
             {
 
                 resposta.SpeakAsync("abrindo gugou");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
                 string target = "https://www.google.com.br/";
                 System.Diagnostics.Process.Start(target);
 
@@ -260,6 +292,10 @@ namespace Ava
             else if (frase.Equals("iutube"))
             {
                 resposta.SpeakAsync("abrindo iutube");
+
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
                 string target = "http://www.youtube.com";
                 System.Diagnostics.Process.Start(target);
             }
@@ -270,13 +306,17 @@ namespace Ava
             {
                 mic.Focus();
                 resposta.SpeakAsync("sim?");
-                mic.BackColor = Color.Purple;
-                mic.ForeColor = Color.White;
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
             }
 
             else if (frase.Equals("minha casa"))
             {
                 resposta.SpeakAsync("abrindo sistema");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
                 this.Visible = false;
                 casa gocomodo = new casa();
                 gocomodo.ShowDialog();
@@ -287,6 +327,10 @@ namespace Ava
 
             else if (frase.Equals("loguin"))
             {
+                resposta.SpeakAsync("até");
+                string c = "b";
+                if (serialPort.IsOpen == true)
+                serialPort.Write(c);
                 this.Close();
 
             }
@@ -355,6 +399,14 @@ namespace Ava
 
         }
 
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
 
+        }
+
+        private void btConectar_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(btConectar, "escolha a entrada do arduino");
+        }
     }
 }
