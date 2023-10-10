@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 20-Set-2023 às 01:08
+-- Tempo de geração: 10-Out-2023 às 23:43
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -34,17 +34,18 @@ CREATE TABLE IF NOT EXISTS `cadastrar` (
   `apelido` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `usuario` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `senha` varchar(8) NOT NULL,
+  `codigo` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`usuario`),
   UNIQUE KEY `id_usuario` (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `cadastrar`
 --
 
-INSERT INTO `cadastrar` (`apelido`, `usuario`, `senha`, `id_usuario`) VALUES
-('pedro', '123', '123', 2);
+INSERT INTO `cadastrar` (`apelido`, `usuario`, `senha`, `codigo`, `id_usuario`) VALUES
+('pedro', '123', '432', '222', 19);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
