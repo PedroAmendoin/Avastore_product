@@ -54,6 +54,7 @@ namespace Ava
                 this.Visible = false;
                 menu go_menu = new menu(us);
                 go_menu.ShowDialog();
+                Apelido.Text = null;
                 Usuario.Text = null;//esvaziando textbox do usuario
                 Senha.Text = null;//esvaziando textbox da senha
                 this.Visible = true;

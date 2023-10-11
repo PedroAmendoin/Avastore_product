@@ -78,25 +78,34 @@ namespace Ava
 
             if (Procedimento_cb.Text == "Alterar senha")
             {
-                label3.Visible = true;
-                Senha_nova.Visible = true;
-                concluir.Visible = true;
+                label3.Visible = true;//label senha nova visível
+                Senha_nova.Visible = true;//textbox senha nova visível
+                concluir.Visible = true;//botão de concluir visível
 
             }
             else
             {
-                label3.Visible = false;
-                Senha_nova.Visible = false;
-                concluir.Visible = false;
+                label3.Visible = false;//label da senha nova invisível
+                Senha_nova.Visible = false;//textbox senha nova invisível
+                concluir.Visible = false;//botão de concluir invisível
             }
 
             if (Procedimento_cb.Text == "Recuperar senha")
             {
-                label2.Visible = false;
-                Senha.Visible = false;
-                Codigo.Visible = true;
-                Enviar.Visible = true;
+                label2.Visible = false;//label da senha
+                Senha.Visible = false;//textbox da senha
+                label4.Visible = true;//label do código de rec
+                Codigo.Visible = true;//textbox do código
+                Enviar.Visible = true;//botão de enviar
 
+            }
+            else
+            {
+                label2.Visible = true;//label da senha
+                Senha.Visible = true;//textbox da senha
+                label4.Visible = false;//label do código de rec
+                Codigo.Visible = false;//textbox do código
+                Enviar.Visible = false;//botão de enviar
             }
 
             }
@@ -223,14 +232,17 @@ namespace Ava
                 MySqlCommand cmd1 = new MySqlCommand(sql, cn);
                 cmd1.ExecuteNonQuery();
                 MessageBox.Show(" "+ (registro["senha"]) +" ");
-                this.Visible = false;
-                Login go_login = new Login();
-                go_login.ShowDialog();
+                this.Close();
                 Usuario.Text = null;//esvaziando textbox do usuario
                 Senha.Text = null;//esvaziando textbox da senha
-                this.Visible = true;
+   
 
             }
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     }

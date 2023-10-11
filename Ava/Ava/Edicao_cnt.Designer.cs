@@ -41,6 +41,7 @@
             this.Codigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Enviar = new System.Windows.Forms.Button();
+            this.Voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +169,16 @@
             this.Enviar.Visible = false;
             this.Enviar.Click += new System.EventHandler(this.Enviar_Click);
             // 
+            // Voltar
+            // 
+            this.Voltar.Location = new System.Drawing.Point(80, 360);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(75, 23);
+            this.Voltar.TabIndex = 26;
+            this.Voltar.Text = "Voltar";
+            this.Voltar.UseVisualStyleBackColor = true;
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
             // Edicao_cnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +186,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Enviar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Codigo);
@@ -212,5 +224,6 @@
         private System.Windows.Forms.TextBox Codigo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Enviar;
+        private System.Windows.Forms.Button Voltar;
     }
 }
