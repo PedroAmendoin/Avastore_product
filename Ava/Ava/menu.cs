@@ -498,5 +498,15 @@ namespace Ava
         {
             google.Visible = false;
         }
+
+        private void AVA_Click(object sender, EventArgs e)
+        {
+            AVA_interact.Visible = true;
+        }
+
+        private void AVA_interact_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

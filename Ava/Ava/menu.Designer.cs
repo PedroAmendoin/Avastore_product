@@ -49,6 +49,8 @@
             this.whatsapp = new System.Windows.Forms.Button();
             this.google = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.AVA = new System.Windows.Forms.Button();
+            this.AVA_interact = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mic
@@ -272,6 +274,30 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // AVA
+            // 
+            this.AVA.Location = new System.Drawing.Point(51, 329);
+            this.AVA.Name = "AVA";
+            this.AVA.Size = new System.Drawing.Size(75, 23);
+            this.AVA.TabIndex = 19;
+            this.AVA.Text = "Ava";
+            this.AVA.UseVisualStyleBackColor = true;
+            this.AVA.Click += new System.EventHandler(this.AVA_Click);
+            // 
+            // AVA_interact
+            // 
+            this.AVA_interact.BackColor = System.Drawing.Color.Transparent;
+            this.AVA_interact.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AVA_interact.BackgroundImage")));
+            this.AVA_interact.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AVA_interact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AVA_interact.Location = new System.Drawing.Point(13, 165);
+            this.AVA_interact.Name = "AVA_interact";
+            this.AVA_interact.Size = new System.Drawing.Size(162, 158);
+            this.AVA_interact.TabIndex = 20;
+            this.AVA_interact.UseVisualStyleBackColor = false;
+            this.AVA_interact.Visible = false;
+            this.AVA_interact.Click += new System.EventHandler(this.AVA_interact_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +305,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.AVA_interact);
+            this.Controls.Add(this.AVA);
             this.Controls.Add(this.google);
             this.Controls.Add(this.whatsapp);
             this.Controls.Add(this.crunchyroll);
@@ -326,6 +354,8 @@
         private System.Windows.Forms.Button whatsapp;
         private System.Windows.Forms.Button google;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AVA;
+        private System.Windows.Forms.Button AVA_interact;
     }
 }
 
