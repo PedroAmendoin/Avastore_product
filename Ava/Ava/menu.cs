@@ -18,6 +18,8 @@ using Modelo;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Crypto;
 using System.IO.Ports; // necessário para ter acesso as portas 
+using System.Diagnostics.Eventing.Reader;
+using Google.Protobuf.WellKnownTypes;
 
 namespace Ava
 {
@@ -407,6 +409,94 @@ namespace Ava
         private void btConectar_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(btConectar, "escolha a entrada do arduino");
+        }
+
+        private void twitch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facebook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void whatsapp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spotfy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crunchyroll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void youtube_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void netflix_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void instagram_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void google_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pesquisar_Click(object sender, EventArgs e)
+        {
+            
+           
+
+                twitch.Visible = true;
+                facebook.Visible = true;
+                whatsapp.Visible = true;
+                spotfy.Visible = true;
+                crunchyroll.Visible = true;
+                youtube.Visible = true;
+                netflix.Visible = true;
+                instagram.Visible = true;
+            
+               
+
+            if (google.Visible == true)
+            {
+                google.Visible = false;
+            }
+
+            
+
+        }
+
+        private void pesquisar_MouseHover(object sender, EventArgs e)
+        {
+            google.Visible = true;
+
+        }
+
+
+        private void google_MouseHover(object sender, EventArgs e)
+        {
+            google.Visible = true;
+
+        }
+
+        private void google_MouseLeave(object sender, EventArgs e)
+        {
+            google.Visible = false;
         }
     }
 }

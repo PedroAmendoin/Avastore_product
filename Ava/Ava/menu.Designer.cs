@@ -38,19 +38,17 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timerCOM = new System.Windows.Forms.Timer(this.components);
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.yt = new System.Windows.Forms.Button();
-            this.tw = new System.Windows.Forms.Button();
-            this.ntf = new System.Windows.Forms.Button();
-            this.spot = new System.Windows.Forms.Button();
-            this.ytb = new System.Windows.Forms.Button();
+            this.twitch = new System.Windows.Forms.Button();
+            this.youtube = new System.Windows.Forms.Button();
             this.pesquisar = new System.Windows.Forms.Button();
-            this.titulo = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.spotfy = new System.Windows.Forms.Button();
+            this.netflix = new System.Windows.Forms.Button();
+            this.instagram = new System.Windows.Forms.Button();
+            this.facebook = new System.Windows.Forms.Button();
+            this.crunchyroll = new System.Windows.Forms.Button();
+            this.whatsapp = new System.Windows.Forms.Button();
+            this.google = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mic
@@ -118,111 +116,33 @@
             this.timerCOM.Interval = 1000;
             this.timerCOM.Tick += new System.EventHandler(this.timerCOM_Tick);
             // 
-            // button1
+            // twitch
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(114, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 101);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Assistir algo";
-            this.button1.UseVisualStyleBackColor = false;
+            this.twitch.BackColor = System.Drawing.Color.Transparent;
+            this.twitch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("twitch.BackgroundImage")));
+            this.twitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.twitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.twitch.Location = new System.Drawing.Point(364, 104);
+            this.twitch.Name = "twitch";
+            this.twitch.Size = new System.Drawing.Size(61, 54);
+            this.twitch.TabIndex = 1;
+            this.twitch.UseVisualStyleBackColor = false;
+            this.twitch.Visible = false;
+            this.twitch.Click += new System.EventHandler(this.twitch_Click);
             // 
-            // button2
+            // youtube
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(460, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 101);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Ouvir um som";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.ntf);
-            this.panel1.Controls.Add(this.tw);
-            this.panel1.Controls.Add(this.yt);
-            this.panel1.Location = new System.Drawing.Point(114, 239);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 60);
-            this.panel1.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pesquisar);
-            this.panel2.Controls.Add(this.ytb);
-            this.panel2.Controls.Add(this.spot);
-            this.panel2.Location = new System.Drawing.Point(460, 239);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 61);
-            this.panel2.TabIndex = 11;
-            // 
-            // yt
-            // 
-            this.yt.BackColor = System.Drawing.Color.White;
-            this.yt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("yt.BackgroundImage")));
-            this.yt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.yt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yt.Location = new System.Drawing.Point(3, 3);
-            this.yt.Name = "yt";
-            this.yt.Size = new System.Drawing.Size(58, 54);
-            this.yt.TabIndex = 0;
-            this.yt.UseVisualStyleBackColor = false;
-            // 
-            // tw
-            // 
-            this.tw.BackColor = System.Drawing.Color.Black;
-            this.tw.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tw.BackgroundImage")));
-            this.tw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tw.Location = new System.Drawing.Point(80, 3);
-            this.tw.Name = "tw";
-            this.tw.Size = new System.Drawing.Size(61, 54);
-            this.tw.TabIndex = 1;
-            this.tw.UseVisualStyleBackColor = false;
-            // 
-            // ntf
-            // 
-            this.ntf.BackColor = System.Drawing.Color.Transparent;
-            this.ntf.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ntf.BackgroundImage")));
-            this.ntf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ntf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ntf.Location = new System.Drawing.Point(161, 3);
-            this.ntf.Name = "ntf";
-            this.ntf.Size = new System.Drawing.Size(58, 54);
-            this.ntf.TabIndex = 2;
-            this.ntf.UseVisualStyleBackColor = false;
-            // 
-            // spot
-            // 
-            this.spot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("spot.BackgroundImage")));
-            this.spot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.spot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.spot.Location = new System.Drawing.Point(151, 2);
-            this.spot.Name = "spot";
-            this.spot.Size = new System.Drawing.Size(66, 54);
-            this.spot.TabIndex = 0;
-            this.spot.UseVisualStyleBackColor = true;
-            // 
-            // ytb
-            // 
-            this.ytb.BackColor = System.Drawing.Color.White;
-            this.ytb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ytb.BackgroundImage")));
-            this.ytb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ytb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ytb.Location = new System.Drawing.Point(3, 4);
-            this.ytb.Name = "ytb";
-            this.ytb.Size = new System.Drawing.Size(58, 54);
-            this.ytb.TabIndex = 3;
-            this.ytb.UseVisualStyleBackColor = false;
+            this.youtube.BackColor = System.Drawing.Color.Transparent;
+            this.youtube.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("youtube.BackgroundImage")));
+            this.youtube.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.youtube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.youtube.Location = new System.Drawing.Point(289, 259);
+            this.youtube.Name = "youtube";
+            this.youtube.Size = new System.Drawing.Size(58, 54);
+            this.youtube.TabIndex = 0;
+            this.youtube.UseVisualStyleBackColor = false;
+            this.youtube.Visible = false;
+            this.youtube.Click += new System.EventHandler(this.youtube_Click);
             // 
             // pesquisar
             // 
@@ -230,48 +150,157 @@
             this.pesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pesquisar.BackgroundImage")));
             this.pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pesquisar.Location = new System.Drawing.Point(77, 4);
+            this.pesquisar.Location = new System.Drawing.Point(364, 190);
             this.pesquisar.Name = "pesquisar";
             this.pesquisar.Size = new System.Drawing.Size(58, 54);
             this.pesquisar.TabIndex = 12;
             this.pesquisar.UseVisualStyleBackColor = false;
+            this.pesquisar.Click += new System.EventHandler(this.pesquisar_Click);
+            this.pesquisar.MouseHover += new System.EventHandler(this.pesquisar_MouseHover);
             // 
-            // titulo
+            // spotfy
             // 
-            this.titulo.AutoSize = true;
-            this.titulo.Location = new System.Drawing.Point(286, 52);
-            this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(226, 23);
-            this.titulo.TabIndex = 12;
-            this.titulo.Text = "Menu";
-            this.titulo.UseVisualStyleBackColor = true;
+            this.spotfy.BackColor = System.Drawing.Color.Transparent;
+            this.spotfy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("spotfy.BackgroundImage")));
+            this.spotfy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.spotfy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.spotfy.Location = new System.Drawing.Point(436, 259);
+            this.spotfy.Name = "spotfy";
+            this.spotfy.Size = new System.Drawing.Size(61, 55);
+            this.spotfy.TabIndex = 0;
+            this.spotfy.UseVisualStyleBackColor = false;
+            this.spotfy.Visible = false;
+            this.spotfy.Click += new System.EventHandler(this.spotfy_Click);
+            // 
+            // netflix
+            // 
+            this.netflix.BackColor = System.Drawing.Color.Transparent;
+            this.netflix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("netflix.BackgroundImage")));
+            this.netflix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.netflix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.netflix.Location = new System.Drawing.Point(257, 190);
+            this.netflix.Name = "netflix";
+            this.netflix.Size = new System.Drawing.Size(58, 54);
+            this.netflix.TabIndex = 2;
+            this.netflix.UseVisualStyleBackColor = false;
+            this.netflix.Visible = false;
+            this.netflix.Click += new System.EventHandler(this.netflix_Click);
+            // 
+            // instagram
+            // 
+            this.instagram.BackColor = System.Drawing.Color.Transparent;
+            this.instagram.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("instagram.BackgroundImage")));
+            this.instagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.instagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.instagram.Location = new System.Drawing.Point(296, 130);
+            this.instagram.Name = "instagram";
+            this.instagram.Size = new System.Drawing.Size(61, 54);
+            this.instagram.TabIndex = 13;
+            this.instagram.UseVisualStyleBackColor = false;
+            this.instagram.Visible = false;
+            this.instagram.Click += new System.EventHandler(this.instagram_Click);
+            // 
+            // facebook
+            // 
+            this.facebook.BackColor = System.Drawing.Color.Transparent;
+            this.facebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("facebook.BackgroundImage")));
+            this.facebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.facebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.facebook.Location = new System.Drawing.Point(436, 130);
+            this.facebook.Name = "facebook";
+            this.facebook.Size = new System.Drawing.Size(61, 54);
+            this.facebook.TabIndex = 14;
+            this.facebook.UseVisualStyleBackColor = false;
+            this.facebook.Visible = false;
+            this.facebook.Click += new System.EventHandler(this.facebook_Click);
+            // 
+            // crunchyroll
+            // 
+            this.crunchyroll.BackColor = System.Drawing.Color.Transparent;
+            this.crunchyroll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("crunchyroll.BackgroundImage")));
+            this.crunchyroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.crunchyroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.crunchyroll.Location = new System.Drawing.Point(364, 292);
+            this.crunchyroll.Name = "crunchyroll";
+            this.crunchyroll.Size = new System.Drawing.Size(61, 54);
+            this.crunchyroll.TabIndex = 15;
+            this.crunchyroll.UseVisualStyleBackColor = false;
+            this.crunchyroll.Visible = false;
+            this.crunchyroll.Click += new System.EventHandler(this.crunchyroll_Click);
+            // 
+            // whatsapp
+            // 
+            this.whatsapp.BackColor = System.Drawing.Color.Transparent;
+            this.whatsapp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("whatsapp.BackgroundImage")));
+            this.whatsapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.whatsapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.whatsapp.Location = new System.Drawing.Point(480, 199);
+            this.whatsapp.Name = "whatsapp";
+            this.whatsapp.Size = new System.Drawing.Size(58, 54);
+            this.whatsapp.TabIndex = 16;
+            this.whatsapp.UseVisualStyleBackColor = false;
+            this.whatsapp.Visible = false;
+            this.whatsapp.Click += new System.EventHandler(this.whatsapp_Click);
+            // 
+            // google
+            // 
+            this.google.BackColor = System.Drawing.Color.Transparent;
+            this.google.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("google.BackgroundImage")));
+            this.google.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.google.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.google.Location = new System.Drawing.Point(364, 232);
+            this.google.Name = "google";
+            this.google.Size = new System.Drawing.Size(58, 54);
+            this.google.TabIndex = 17;
+            this.google.UseVisualStyleBackColor = false;
+            this.google.Visible = false;
+            this.google.Click += new System.EventHandler(this.google_Click);
+            this.google.MouseLeave += new System.EventHandler(this.google_MouseLeave);
+            this.google.MouseHover += new System.EventHandler(this.google_MouseHover);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(162, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(471, 389);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.titulo);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.google);
+            this.Controls.Add(this.whatsapp);
+            this.Controls.Add(this.crunchyroll);
+            this.Controls.Add(this.facebook);
+            this.Controls.Add(this.instagram);
+            this.Controls.Add(this.netflix);
+            this.Controls.Add(this.pesquisar);
+            this.Controls.Add(this.spotfy);
+            this.Controls.Add(this.youtube);
+            this.Controls.Add(this.twitch);
             this.Controls.Add(this.btConectar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.perfil);
             this.Controls.Add(this.apelido);
             this.Controls.Add(this.mic);
+            this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load_1);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,17 +315,17 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Timer timerCOM;
         private System.IO.Ports.SerialPort serialPort;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button ntf;
-        private System.Windows.Forms.Button tw;
-        private System.Windows.Forms.Button yt;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button spot;
-        private System.Windows.Forms.Button ytb;
+        private System.Windows.Forms.Button twitch;
+        private System.Windows.Forms.Button youtube;
+        private System.Windows.Forms.Button spotfy;
         private System.Windows.Forms.Button pesquisar;
-        private System.Windows.Forms.Button titulo;
+        private System.Windows.Forms.Button netflix;
+        private System.Windows.Forms.Button instagram;
+        private System.Windows.Forms.Button facebook;
+        private System.Windows.Forms.Button crunchyroll;
+        private System.Windows.Forms.Button whatsapp;
+        private System.Windows.Forms.Button google;
+        private System.Windows.Forms.Button button1;
     }
 }
 
