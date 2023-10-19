@@ -267,7 +267,10 @@ namespace Ava
 
         }
 
-       
+        private void fundologo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
