@@ -50,7 +50,12 @@
             this.google = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AVA = new System.Windows.Forms.Button();
-            this.AVA_interact = new System.Windows.Forms.Button();
+            this.AVA_interact = new System.Windows.Forms.PictureBox();
+            this.AVA_interactsd = new System.Windows.Forms.PictureBox();
+            this.fechar_itns = new System.Windows.Forms.Button();
+            this.guia_olhar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.AVA_interact)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AVA_interactsd)).BeginInit();
             this.SuspendLayout();
             // 
             // mic
@@ -273,6 +278,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AVA
             // 
@@ -286,17 +292,51 @@
             // 
             // AVA_interact
             // 
-            this.AVA_interact.BackColor = System.Drawing.Color.Transparent;
-            this.AVA_interact.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AVA_interact.BackgroundImage")));
-            this.AVA_interact.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AVA_interact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AVA_interact.Location = new System.Drawing.Point(13, 165);
+            this.AVA_interact.Image = ((System.Drawing.Image)(resources.GetObject("AVA_interact.Image")));
+            this.AVA_interact.Location = new System.Drawing.Point(12, 160);
             this.AVA_interact.Name = "AVA_interact";
-            this.AVA_interact.Size = new System.Drawing.Size(162, 158);
-            this.AVA_interact.TabIndex = 20;
-            this.AVA_interact.UseVisualStyleBackColor = false;
-            this.AVA_interact.Visible = false;
+            this.AVA_interact.Size = new System.Drawing.Size(163, 154);
+            this.AVA_interact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AVA_interact.TabIndex = 21;
+            this.AVA_interact.TabStop = false;
             this.AVA_interact.Click += new System.EventHandler(this.AVA_interact_Click);
+            // 
+            // AVA_interactsd
+            // 
+            this.AVA_interactsd.Image = ((System.Drawing.Image)(resources.GetObject("AVA_interactsd.Image")));
+            this.AVA_interactsd.Location = new System.Drawing.Point(12, 159);
+            this.AVA_interactsd.Name = "AVA_interactsd";
+            this.AVA_interactsd.Size = new System.Drawing.Size(163, 154);
+            this.AVA_interactsd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AVA_interactsd.TabIndex = 22;
+            this.AVA_interactsd.TabStop = false;
+            this.AVA_interactsd.Visible = false;
+            this.AVA_interactsd.Click += new System.EventHandler(this.AVA_interactsd_Click);
+            // 
+            // fechar_itns
+            // 
+            this.fechar_itns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fechar_itns.ForeColor = System.Drawing.Color.White;
+            this.fechar_itns.Location = new System.Drawing.Point(364, 389);
+            this.fechar_itns.Name = "fechar_itns";
+            this.fechar_itns.Size = new System.Drawing.Size(58, 23);
+            this.fechar_itns.TabIndex = 23;
+            this.fechar_itns.Text = "^";
+            this.fechar_itns.UseVisualStyleBackColor = true;
+            this.fechar_itns.Click += new System.EventHandler(this.fechar_itns_Click);
+            // 
+            // guia_olhar
+            // 
+            this.guia_olhar.BackColor = System.Drawing.Color.Transparent;
+            this.guia_olhar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guia_olhar.Location = new System.Drawing.Point(271, 104);
+            this.guia_olhar.Name = "guia_olhar";
+            this.guia_olhar.Size = new System.Drawing.Size(267, 242);
+            this.guia_olhar.TabIndex = 25;
+            this.guia_olhar.UseVisualStyleBackColor = false;
+            this.guia_olhar.Click += new System.EventHandler(this.guia_olhar_Click);
+            this.guia_olhar.MouseLeave += new System.EventHandler(this.guia_olhar_MouseLeave);
+            this.guia_olhar.MouseHover += new System.EventHandler(this.guia_olhar_MouseHover);
             // 
             // menu
             // 
@@ -305,6 +345,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.fechar_itns);
+            this.Controls.Add(this.AVA_interactsd);
             this.Controls.Add(this.AVA_interact);
             this.Controls.Add(this.AVA);
             this.Controls.Add(this.google);
@@ -323,12 +365,15 @@
             this.Controls.Add(this.apelido);
             this.Controls.Add(this.mic);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.guia_olhar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.AVA_interact)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AVA_interactsd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,7 +400,10 @@
         private System.Windows.Forms.Button google;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button AVA;
-        private System.Windows.Forms.Button AVA_interact;
+        private System.Windows.Forms.PictureBox AVA_interact;
+        private System.Windows.Forms.PictureBox AVA_interactsd;
+        private System.Windows.Forms.Button fechar_itns;
+        private System.Windows.Forms.Button guia_olhar;
     }
 }
 

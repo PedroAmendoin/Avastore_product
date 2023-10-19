@@ -413,54 +413,64 @@ namespace Ava
 
         private void twitch_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.twitch.tv/";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void facebook_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.facebook.com/?locale=pt_BR";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void whatsapp_Click(object sender, EventArgs e)
         {
-
+            string target = "https://web.whatsapp.com/";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void spotfy_Click(object sender, EventArgs e)
         {
-
+            string target = "https://open.spotify.com/intl-pt";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void crunchyroll_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.crunchyroll.com/pt-br/";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void youtube_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.youtube.com/";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void netflix_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.netflix.com/br/";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void instagram_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.instagram.com/";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void google_Click(object sender, EventArgs e)
         {
-
+            string target = "https://www.google.com.br/?hl=pt-BR";
+            System.Diagnostics.Process.Start(target);
         }
 
         private void pesquisar_Click(object sender, EventArgs e)
         {
-            
-           
 
+
+            AVA_interactsd.Visible = true;
+            AVA_interact.Visible = false;
                 twitch.Visible = true;
                 facebook.Visible = true;
                 whatsapp.Visible = true;
@@ -501,12 +511,68 @@ namespace Ava
 
         private void AVA_Click(object sender, EventArgs e)
         {
-            AVA_interact.Visible = true;
+            
+        }
+
+        private void AVA_interact_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void AVA_interact_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AVA_interactsd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechar_itns_Click(object sender, EventArgs e)
+        {
+
+            AVA_interactsd.Visible = false;
+            AVA_interact.Visible = true;
+            twitch.Visible = false;
+            facebook.Visible = false;
+            whatsapp.Visible = false;
+            spotfy.Visible = false;
+            crunchyroll.Visible = false;
+            youtube.Visible = false;
+            netflix.Visible = false;
+            instagram.Visible = false;
+        }
+
+    
+
+   
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void guia_olhar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guia_olhar_MouseHover(object sender, EventArgs e)
+        {
+            AVA_interactsd.Visible = true;
+            AVA_interact.Visible = false;
+
+        }
+
+        private void guia_olhar_MouseLeave(object sender, EventArgs e)
+        {
+            if (twitch.Visible == false)
+            {
+                AVA_interactsd.Visible = false;
+                AVA_interact.Visible = true;
+            }
         }
     }
 }
