@@ -54,13 +54,17 @@
             this.AVA_interactsd = new System.Windows.Forms.PictureBox();
             this.fechar_itns = new System.Windows.Forms.Button();
             this.guia_olhar = new System.Windows.Forms.Button();
+            this.casinha = new System.Windows.Forms.Button();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.voltar = new System.Windows.Forms.Button();
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interactsd)).BeginInit();
             this.SuspendLayout();
             // 
             // mic
             // 
-            this.mic.Location = new System.Drawing.Point(296, 440);
+            this.mic.Location = new System.Drawing.Point(296, 444);
             this.mic.Name = "mic";
             this.mic.Size = new System.Drawing.Size(201, 34);
             this.mic.TabIndex = 3;
@@ -86,7 +90,7 @@
             this.perfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("perfil.BackgroundImage")));
             this.perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.perfil.Location = new System.Drawing.Point(557, 440);
+            this.perfil.Location = new System.Drawing.Point(379, 418);
             this.perfil.Name = "perfil";
             this.perfil.Size = new System.Drawing.Size(32, 30);
             this.perfil.TabIndex = 5;
@@ -100,9 +104,9 @@
             // 
             // btConectar
             // 
-            this.btConectar.Location = new System.Drawing.Point(114, 446);
+            this.btConectar.Location = new System.Drawing.Point(296, 484);
             this.btConectar.Name = "btConectar";
-            this.btConectar.Size = new System.Drawing.Size(61, 23);
+            this.btConectar.Size = new System.Drawing.Size(103, 23);
             this.btConectar.TabIndex = 6;
             this.btConectar.Text = "conectar";
             this.btConectar.UseVisualStyleBackColor = true;
@@ -112,9 +116,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(181, 446);
+            this.comboBox1.Location = new System.Drawing.Point(405, 486);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 21);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -271,7 +275,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(162, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(471, 389);
@@ -282,7 +286,7 @@
             // 
             // AVA
             // 
-            this.AVA.Location = new System.Drawing.Point(51, 329);
+            this.AVA.Location = new System.Drawing.Point(65, 304);
             this.AVA.Name = "AVA";
             this.AVA.Size = new System.Drawing.Size(75, 23);
             this.AVA.TabIndex = 19;
@@ -292,19 +296,22 @@
             // 
             // AVA_interact
             // 
+            this.AVA_interact.BackColor = System.Drawing.Color.Transparent;
             this.AVA_interact.Image = ((System.Drawing.Image)(resources.GetObject("AVA_interact.Image")));
-            this.AVA_interact.Location = new System.Drawing.Point(12, 160);
+            this.AVA_interact.Location = new System.Drawing.Point(23, 144);
             this.AVA_interact.Name = "AVA_interact";
             this.AVA_interact.Size = new System.Drawing.Size(163, 154);
             this.AVA_interact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AVA_interact.TabIndex = 21;
             this.AVA_interact.TabStop = false;
             this.AVA_interact.Click += new System.EventHandler(this.AVA_interact_Click);
+            this.AVA_interact.MouseHover += new System.EventHandler(this.AVA_interact_MouseHover);
             // 
             // AVA_interactsd
             // 
+            this.AVA_interactsd.BackColor = System.Drawing.Color.Transparent;
             this.AVA_interactsd.Image = ((System.Drawing.Image)(resources.GetObject("AVA_interactsd.Image")));
-            this.AVA_interactsd.Location = new System.Drawing.Point(12, 159);
+            this.AVA_interactsd.Location = new System.Drawing.Point(23, 144);
             this.AVA_interactsd.Name = "AVA_interactsd";
             this.AVA_interactsd.Size = new System.Drawing.Size(163, 154);
             this.AVA_interactsd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,13 +345,51 @@
             this.guia_olhar.MouseLeave += new System.EventHandler(this.guia_olhar_MouseLeave);
             this.guia_olhar.MouseHover += new System.EventHandler(this.guia_olhar_MouseHover);
             // 
+            // casinha
+            // 
+            this.casinha.BackColor = System.Drawing.Color.Transparent;
+            this.casinha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("casinha.BackgroundImage")));
+            this.casinha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.casinha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.casinha.Location = new System.Drawing.Point(588, 141);
+            this.casinha.Name = "casinha";
+            this.casinha.Size = new System.Drawing.Size(17, 169);
+            this.casinha.TabIndex = 26;
+            this.casinha.UseVisualStyleBackColor = false;
+            this.casinha.Click += new System.EventHandler(this.casinha_Click);
+            this.casinha.MouseHover += new System.EventHandler(this.casinha_MouseHover);
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip2_Popup);
+            // 
+            // voltar
+            // 
+            this.voltar.BackColor = System.Drawing.Color.Transparent;
+            this.voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("voltar.BackgroundImage")));
+            this.voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.voltar.Location = new System.Drawing.Point(192, 133);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(17, 169);
+            this.voltar.TabIndex = 27;
+            this.voltar.UseVisualStyleBackColor = false;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip3_Popup);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.voltar);
+            this.Controls.Add(this.casinha);
             this.Controls.Add(this.fechar_itns);
             this.Controls.Add(this.AVA_interactsd);
             this.Controls.Add(this.AVA_interact);
@@ -404,6 +449,10 @@
         private System.Windows.Forms.PictureBox AVA_interactsd;
         private System.Windows.Forms.Button fechar_itns;
         private System.Windows.Forms.Button guia_olhar;
+        private System.Windows.Forms.Button casinha;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Button voltar;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }
 

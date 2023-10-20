@@ -125,7 +125,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "eiva?", "gugou", "iutube","minha casa","loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem","expandir","mais","menu", "eiva?", "tuít", "feicebuk","wótizapi","ispótifai","crântirol","yutube","netflix","instagram","gugol","minha casa","loguin", "obrigado" };
        LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
@@ -194,7 +194,7 @@ namespace Ava
 
             string frase = e.Result.Text;
 
-            if (frase.Length.Equals(null)== false)
+            if (frase.Length.Equals(null) == false)
             {
                 MyAsyncMethod();
                
@@ -279,10 +279,103 @@ namespace Ava
                     serialPort.Write(c);//envia variável
             }
 
-            else if (frase.Equals("gugou"))
+            else if (frase.Equals("expandir") || frase.Equals("mais") || frase.Equals("menu"))
+            {
+                mostrar();
+            }
+
+
+            else if (frase.Equals("tuít"))
             {
 
-                resposta.SpeakAsync("abrindo gugou");
+                resposta.SpeakAsync("abrindo tuít");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://www.twitch.tv/";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+            else if (frase.Equals("feicebuk"))
+            {
+
+                resposta.SpeakAsync("abrindo feicebuk");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://www.facebook.com/?locale=pt_BR";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+
+
+            else if (frase.Equals("wótzapi"))
+            {
+
+                resposta.SpeakAsync("abrindo wótizapi");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://web.whatsapp.com/";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+
+            else if (frase.Equals("ispótifai"))
+            {
+
+                resposta.SpeakAsync("abrindo ispótifai");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://open.spotify.com/intl-pt";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+            else if (frase.Equals("crântirol"))
+            {
+
+                resposta.SpeakAsync("abrindo crânti");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://www.crunchyroll.com/pt-br/";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+            else if (frase.Equals("yutube"))
+            {
+
+                resposta.SpeakAsync("abrindo yutube");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://www.youtube.com/";
+                System.Diagnostics.Process.Start(target);
+
+            }
+
+
+            else if (frase.Equals("netflix"))
+            {
+
+                resposta.SpeakAsync("abrindo netflix");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://www.netflix.com/br/";
+                System.Diagnostics.Process.Start(target);
+
+            }
+            else if (frase.Equals("gugol"))
+            {
+
+                resposta.SpeakAsync("abrindo gugol");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
@@ -291,14 +384,14 @@ namespace Ava
 
             }
 
-            else if (frase.Equals("iutube"))
+            else if (frase.Equals("instagram"))
             {
-                resposta.SpeakAsync("abrindo iutube");
+                resposta.SpeakAsync("abrindo instagram");
 
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
-                string target = "http://www.youtube.com";
+                string target = "https://www.instagram.com/";
                 System.Diagnostics.Process.Start(target);
             }
 
@@ -367,7 +460,7 @@ namespace Ava
 
         private void mic_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void apelido_Click(object sender, EventArgs e)
@@ -465,31 +558,36 @@ namespace Ava
             System.Diagnostics.Process.Start(target);
         }
 
-        private void pesquisar_Click(object sender, EventArgs e)
+        public void mostrar()
         {
-
-
             AVA_interactsd.Visible = true;
             AVA_interact.Visible = false;
-                twitch.Visible = true;
-                facebook.Visible = true;
-                whatsapp.Visible = true;
-                spotfy.Visible = true;
-                crunchyroll.Visible = true;
-                youtube.Visible = true;
-                netflix.Visible = true;
-                instagram.Visible = true;
-            
-               
+            twitch.Visible = true;
+            facebook.Visible = true;
+            whatsapp.Visible = true;
+            spotfy.Visible = true;
+            crunchyroll.Visible = true;
+            youtube.Visible = true;
+            netflix.Visible = true;
+            instagram.Visible = true;
+            fechar_itns.Visible = true;
+
+
 
             if (google.Visible == true)
             {
                 google.Visible = false;
             }
-
-            
-
         }
+
+
+        private void pesquisar_Click(object sender, EventArgs e)
+        {
+            mostrar();
+        }
+
+           
+
 
         private void pesquisar_MouseHover(object sender, EventArgs e)
         {
@@ -542,6 +640,7 @@ namespace Ava
             youtube.Visible = false;
             netflix.Visible = false;
             instagram.Visible = false;
+            fechar_itns.Visible = false;
         }
 
     
@@ -574,5 +673,41 @@ namespace Ava
                 AVA_interact.Visible = true;
             }
         }
+
+        private void casinha_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            casa gocomodo = new casa();
+            gocomodo.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void casinha_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(casinha, "clique para acessar casa \n ou \n diga 'minha casa'");
+
+        }
+
+        private void AVA_interact_MouseHover(object sender, EventArgs e)
+        {
+            toolTip2.SetToolTip(AVA_interact, "clique no '+' para acessar opções \n ou \n diga uma das palavras a seguir 'expandir/mais/menu'");
+        }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolTip2_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+        
+        private void toolTip3_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -34,7 +34,6 @@
             this.Senha = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.TextBox();
             this.Procedimento_cb = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Senha_nova = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.concluir = new System.Windows.Forms.Button();
@@ -42,7 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Enviar = new System.Windows.Forms.Button();
             this.Voltar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -97,16 +97,6 @@
             this.Procedimento_cb.Size = new System.Drawing.Size(121, 21);
             this.Procedimento_cb.TabIndex = 12;
             this.Procedimento_cb.SelectedIndexChanged += new System.EventHandler(this.Procedimento_cb_SelectedIndexChanged);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(364, 122);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 72);
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
             // 
             // Senha_nova
             // 
@@ -179,6 +169,19 @@
             this.Voltar.UseVisualStyleBackColor = true;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(347, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // Edicao_cnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +189,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Enviar);
             this.Controls.Add(this.label4);
@@ -193,7 +197,6 @@
             this.Controls.Add(this.concluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Senha_nova);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Procedimento_cb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -204,7 +207,7 @@
             this.Name = "Edicao_cnt";
             this.Text = "Edicao_cnt";
             this.Load += new System.EventHandler(this.Edicao_cnt_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +220,6 @@
         private System.Windows.Forms.TextBox Senha;
         private System.Windows.Forms.TextBox Usuario;
         private System.Windows.Forms.ComboBox Procedimento_cb;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox Senha_nova;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button concluir;
@@ -225,5 +227,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Enviar;
         private System.Windows.Forms.Button Voltar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
