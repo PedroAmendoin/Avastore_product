@@ -259,6 +259,7 @@
             this.Controls.Add(this.quarto);
             this.Controls.Add(this.mic);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "casa";
             this.Text = "cômodo";
             this.Load += new System.EventHandler(this.cômodo_Load);

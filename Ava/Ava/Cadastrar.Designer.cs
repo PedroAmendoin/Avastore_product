@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastrar));
             this.Apelido = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.TextBox();
@@ -35,10 +36,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Voltar = new System.Windows.Forms.Button();
             this.Entrar = new System.Windows.Forms.Button();
             this.codigo_rec = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.TextBox();
+            this.login = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.login)).BeginInit();
             this.SuspendLayout();
             // 
             // Apelido
@@ -101,16 +104,6 @@
             this.label3.Text = "Senha:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Voltar
-            // 
-            this.Voltar.Location = new System.Drawing.Point(55, 83);
-            this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(75, 23);
-            this.Voltar.TabIndex = 7;
-            this.Voltar.Text = "Voltar";
-            this.Voltar.UseVisualStyleBackColor = true;
-            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
-            // 
             // Entrar
             // 
             this.Entrar.Location = new System.Drawing.Point(364, 344);
@@ -139,6 +132,19 @@
             this.Codigo.TabIndex = 9;
             this.Codigo.TextChanged += new System.EventHandler(this.Codigo_TextChanged);
             // 
+            // login
+            // 
+            this.login.BackColor = System.Drawing.Color.Transparent;
+            this.login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login.BackgroundImage")));
+            this.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login.Location = new System.Drawing.Point(63, 119);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(17, 169);
+            this.login.TabIndex = 32;
+            this.login.TabStop = false;
+            this.login.Click += new System.EventHandler(this.login_Click);
+            this.login.MouseHover += new System.EventHandler(this.login_MouseHover);
+            // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,9 +153,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.Codigo);
             this.Controls.Add(this.codigo_rec);
-            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Entrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -163,6 +169,7 @@
             this.Name = "Cadastrar";
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,9 +183,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Voltar;
         private System.Windows.Forms.Button Entrar;
         private System.Windows.Forms.Label codigo_rec;
         private System.Windows.Forms.TextBox Codigo;
+        private System.Windows.Forms.PictureBox login;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

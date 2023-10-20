@@ -126,5 +126,15 @@ namespace Ava
         {
 
         }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void login_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(login, "clique para voltar ao login");
+        }
     }
 }

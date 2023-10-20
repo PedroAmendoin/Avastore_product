@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edicao_cnt));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +41,11 @@
             this.Codigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Enviar = new System.Windows.Forms.Button();
-            this.Voltar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.login = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -159,16 +162,6 @@
             this.Enviar.Visible = false;
             this.Enviar.Click += new System.EventHandler(this.Enviar_Click);
             // 
-            // Voltar
-            // 
-            this.Voltar.Location = new System.Drawing.Point(80, 360);
-            this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(75, 23);
-            this.Voltar.TabIndex = 26;
-            this.Voltar.Text = "Voltar";
-            this.Voltar.UseVisualStyleBackColor = true;
-            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -182,6 +175,19 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // login
+            // 
+            this.login.BackColor = System.Drawing.Color.Transparent;
+            this.login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login.BackgroundImage")));
+            this.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login.Location = new System.Drawing.Point(45, 105);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(17, 169);
+            this.login.TabIndex = 31;
+            this.login.TabStop = false;
+            this.login.Click += new System.EventHandler(this.login_Click);
+            this.login.MouseHover += new System.EventHandler(this.login_MouseHover);
+            // 
             // Edicao_cnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,8 +195,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Enviar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Codigo);
@@ -208,6 +214,7 @@
             this.Text = "Edicao_cnt";
             this.Load += new System.EventHandler(this.Edicao_cnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +233,8 @@
         private System.Windows.Forms.TextBox Codigo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Enviar;
-        private System.Windows.Forms.Button Voltar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox login;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
