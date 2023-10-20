@@ -328,5 +328,20 @@ namespace Ava
         {
 
         }
+
+        private void ajuda_Click(object sender, EventArgs e)
+        {
+            descricao.Visible = true;
+        }
+
+        private void descricao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comandos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,18 +48,20 @@
             this.crunchyroll = new System.Windows.Forms.Button();
             this.whatsapp = new System.Windows.Forms.Button();
             this.google = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.AVA = new System.Windows.Forms.Button();
             this.AVA_interact = new System.Windows.Forms.PictureBox();
             this.AVA_interactsd = new System.Windows.Forms.PictureBox();
             this.fechar_itns = new System.Windows.Forms.Button();
-            this.guia_olhar = new System.Windows.Forms.Button();
-            this.casinha = new System.Windows.Forms.Button();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.voltar = new System.Windows.Forms.Button();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.acessar_casa = new System.Windows.Forms.PictureBox();
+            this.login = new System.Windows.Forms.PictureBox();
+            this.foco_olhar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interactsd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acessar_casa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foco_olhar)).BeginInit();
             this.SuspendLayout();
             // 
             // mic
@@ -74,10 +76,11 @@
             // 
             // apelido
             // 
+            this.apelido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.apelido.AutoSize = true;
             this.apelido.BackColor = System.Drawing.Color.White;
             this.apelido.ForeColor = System.Drawing.Color.Black;
-            this.apelido.Location = new System.Drawing.Point(595, 449);
+            this.apelido.Location = new System.Drawing.Point(105, 395);
             this.apelido.Name = "apelido";
             this.apelido.Size = new System.Drawing.Size(0, 13);
             this.apelido.TabIndex = 4;
@@ -90,7 +93,7 @@
             this.perfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("perfil.BackgroundImage")));
             this.perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.perfil.Location = new System.Drawing.Point(379, 418);
+            this.perfil.Location = new System.Drawing.Point(91, 362);
             this.perfil.Name = "perfil";
             this.perfil.Size = new System.Drawing.Size(32, 30);
             this.perfil.TabIndex = 5;
@@ -189,7 +192,7 @@
             this.netflix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("netflix.BackgroundImage")));
             this.netflix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.netflix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.netflix.Location = new System.Drawing.Point(257, 190);
+            this.netflix.Location = new System.Drawing.Point(261, 190);
             this.netflix.Name = "netflix";
             this.netflix.Size = new System.Drawing.Size(58, 54);
             this.netflix.TabIndex = 2;
@@ -269,24 +272,9 @@
             this.google.MouseLeave += new System.EventHandler(this.google_MouseLeave);
             this.google.MouseHover += new System.EventHandler(this.google_MouseHover);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(162, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(471, 389);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // AVA
             // 
-            this.AVA.Location = new System.Drawing.Point(65, 304);
+            this.AVA.Location = new System.Drawing.Point(69, 323);
             this.AVA.Name = "AVA";
             this.AVA.Size = new System.Drawing.Size(75, 23);
             this.AVA.TabIndex = 19;
@@ -332,53 +320,51 @@
             this.fechar_itns.UseVisualStyleBackColor = true;
             this.fechar_itns.Click += new System.EventHandler(this.fechar_itns_Click);
             // 
-            // guia_olhar
-            // 
-            this.guia_olhar.BackColor = System.Drawing.Color.Transparent;
-            this.guia_olhar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.guia_olhar.Location = new System.Drawing.Point(271, 104);
-            this.guia_olhar.Name = "guia_olhar";
-            this.guia_olhar.Size = new System.Drawing.Size(267, 242);
-            this.guia_olhar.TabIndex = 25;
-            this.guia_olhar.UseVisualStyleBackColor = false;
-            this.guia_olhar.Click += new System.EventHandler(this.guia_olhar_Click);
-            this.guia_olhar.MouseLeave += new System.EventHandler(this.guia_olhar_MouseLeave);
-            this.guia_olhar.MouseHover += new System.EventHandler(this.guia_olhar_MouseHover);
-            // 
-            // casinha
-            // 
-            this.casinha.BackColor = System.Drawing.Color.Transparent;
-            this.casinha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("casinha.BackgroundImage")));
-            this.casinha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.casinha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.casinha.Location = new System.Drawing.Point(588, 141);
-            this.casinha.Name = "casinha";
-            this.casinha.Size = new System.Drawing.Size(17, 169);
-            this.casinha.TabIndex = 26;
-            this.casinha.UseVisualStyleBackColor = false;
-            this.casinha.Click += new System.EventHandler(this.casinha_Click);
-            this.casinha.MouseHover += new System.EventHandler(this.casinha_MouseHover);
-            // 
             // toolTip2
             // 
             this.toolTip2.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip2_Popup);
             // 
-            // voltar
-            // 
-            this.voltar.BackColor = System.Drawing.Color.Transparent;
-            this.voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("voltar.BackgroundImage")));
-            this.voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.voltar.Location = new System.Drawing.Point(192, 133);
-            this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(17, 169);
-            this.voltar.TabIndex = 27;
-            this.voltar.UseVisualStyleBackColor = false;
-            this.voltar.Click += new System.EventHandler(this.voltar_Click);
-            // 
             // toolTip3
             // 
             this.toolTip3.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip3_Popup);
+            // 
+            // acessar_casa
+            // 
+            this.acessar_casa.BackColor = System.Drawing.Color.Transparent;
+            this.acessar_casa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("acessar_casa.BackgroundImage")));
+            this.acessar_casa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.acessar_casa.Location = new System.Drawing.Point(588, 133);
+            this.acessar_casa.Name = "acessar_casa";
+            this.acessar_casa.Size = new System.Drawing.Size(17, 169);
+            this.acessar_casa.TabIndex = 28;
+            this.acessar_casa.TabStop = false;
+            this.acessar_casa.Click += new System.EventHandler(this.acessar_casa_Click);
+            this.acessar_casa.MouseHover += new System.EventHandler(this.acessar_casa_MouseHover);
+            // 
+            // login
+            // 
+            this.login.BackColor = System.Drawing.Color.Transparent;
+            this.login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login.BackgroundImage")));
+            this.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login.Location = new System.Drawing.Point(192, 133);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(17, 169);
+            this.login.TabIndex = 29;
+            this.login.TabStop = false;
+            this.login.Click += new System.EventHandler(this.login_Click);
+            this.login.MouseHover += new System.EventHandler(this.login_MouseHover);
+            // 
+            // foco_olhar
+            // 
+            this.foco_olhar.BackColor = System.Drawing.Color.Transparent;
+            this.foco_olhar.Location = new System.Drawing.Point(261, 104);
+            this.foco_olhar.Name = "foco_olhar";
+            this.foco_olhar.Size = new System.Drawing.Size(277, 242);
+            this.foco_olhar.TabIndex = 31;
+            this.foco_olhar.TabStop = false;
+            this.foco_olhar.Click += new System.EventHandler(this.foco_olhar_Click);
+            this.foco_olhar.MouseLeave += new System.EventHandler(this.foco_olhar_MouseLeave);
+            this.foco_olhar.MouseHover += new System.EventHandler(this.foco_olhar_MouseHover);
             // 
             // menu
             // 
@@ -388,8 +374,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.voltar);
-            this.Controls.Add(this.casinha);
+            this.Controls.Add(this.login);
+            this.Controls.Add(this.acessar_casa);
             this.Controls.Add(this.fechar_itns);
             this.Controls.Add(this.AVA_interactsd);
             this.Controls.Add(this.AVA_interact);
@@ -409,8 +395,7 @@
             this.Controls.Add(this.perfil);
             this.Controls.Add(this.apelido);
             this.Controls.Add(this.mic);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.guia_olhar);
+            this.Controls.Add(this.foco_olhar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
@@ -419,6 +404,9 @@
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interactsd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acessar_casa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foco_olhar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,16 +431,15 @@
         private System.Windows.Forms.Button crunchyroll;
         private System.Windows.Forms.Button whatsapp;
         private System.Windows.Forms.Button google;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button AVA;
         private System.Windows.Forms.PictureBox AVA_interact;
         private System.Windows.Forms.PictureBox AVA_interactsd;
         private System.Windows.Forms.Button fechar_itns;
-        private System.Windows.Forms.Button guia_olhar;
-        private System.Windows.Forms.Button casinha;
         private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.Button voltar;
         private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.PictureBox acessar_casa;
+        private System.Windows.Forms.PictureBox login;
+        private System.Windows.Forms.PictureBox foco_olhar;
     }
 }
 

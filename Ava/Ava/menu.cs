@@ -658,44 +658,11 @@ namespace Ava
 
         }
 
-        private void guia_olhar_MouseHover(object sender, EventArgs e)
-        {
-            AVA_interactsd.Visible = true;
-            AVA_interact.Visible = false;
-
-        }
-
-        private void guia_olhar_MouseLeave(object sender, EventArgs e)
-        {
-            if (twitch.Visible == false)
-            {
-                AVA_interactsd.Visible = false;
-                AVA_interact.Visible = true;
-            }
-        }
-
-        private void casinha_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            casa gocomodo = new casa();
-            gocomodo.ShowDialog();
-            this.Visible = true;
-        }
-
-        private void casinha_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(casinha, "clique para acessar casa \n ou \n diga 'minha casa'");
-
-        }
+        
 
         private void AVA_interact_MouseHover(object sender, EventArgs e)
         {
             toolTip2.SetToolTip(AVA_interact, "clique no '+' para acessar opções \n ou \n diga uma das palavras a seguir 'expandir/mais/menu'");
-        }
-
-        private void voltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void toolTip2_Popup(object sender, PopupEventArgs e)
@@ -708,6 +675,48 @@ namespace Ava
 
         }
 
-        
+        private void acessar_casa_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            casa gocomodo = new casa();
+            gocomodo.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void acessar_casa_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(acessar_casa, "clique para acessar casa \n ou \n diga 'minha casa'");
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void login_MouseHover(object sender, EventArgs e)
+        {
+            toolTip3.SetToolTip(login, "clique para voltar ao login \n ou \n diga 'login'");
+        }
+
+        private void foco_olhar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foco_olhar_MouseHover(object sender, EventArgs e)
+        {
+            AVA_interactsd.Visible = true;
+            AVA_interact.Visible = false;
+        }
+
+        private void foco_olhar_MouseLeave(object sender, EventArgs e)
+        {
+            if (twitch.Visible == false)
+            {
+            AVA_interactsd.Visible = false;
+            AVA_interact.Visible = true;
+            }
+            
+        }
     }
 }

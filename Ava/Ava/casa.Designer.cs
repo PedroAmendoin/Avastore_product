@@ -39,6 +39,10 @@
             this.temp_sala = new System.Windows.Forms.Button();
             this.temp_banheiro = new System.Windows.Forms.Button();
             this.cam_se = new System.Windows.Forms.Button();
+            this.ajuda = new System.Windows.Forms.PictureBox();
+            this.comandos = new System.Windows.Forms.ComboBox();
+            this.descricao = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ajuda)).BeginInit();
             this.SuspendLayout();
             // 
             // mic
@@ -157,6 +161,52 @@
             this.cam_se.UseVisualStyleBackColor = false;
             this.cam_se.Click += new System.EventHandler(this.cam_se_Click);
             // 
+            // ajuda
+            // 
+            this.ajuda.BackColor = System.Drawing.Color.Transparent;
+            this.ajuda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ajuda.BackgroundImage")));
+            this.ajuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ajuda.Location = new System.Drawing.Point(362, 207);
+            this.ajuda.Name = "ajuda";
+            this.ajuda.Size = new System.Drawing.Size(75, 65);
+            this.ajuda.TabIndex = 10;
+            this.ajuda.TabStop = false;
+            this.ajuda.Click += new System.EventHandler(this.ajuda_Click);
+            // 
+            // comandos
+            // 
+            this.comandos.FormattingEnabled = true;
+            this.comandos.Items.AddRange(new object[] {
+            "\"acender luz do quarto/banheiro\"",
+            "\"apagar luz do quarto/banheiro\"",
+            "\"temperatura do quarto/banheiro\"",
+            "\"fechar temperatura do quarto/banheiro\"",
+            "",
+            "\"acender luz da cozinha/sala\"",
+            "\"apagar luz da cozinha/sala\"",
+            "\"temperatura da cozinha/sala\"",
+            "\"fechar temperatura da cozinha/sala\",",
+            "",
+            "\"pesquisa\"",
+            "\"câmera\""});
+            this.comandos.Location = new System.Drawing.Point(294, 330);
+            this.comandos.Name = "comandos";
+            this.comandos.Size = new System.Drawing.Size(203, 21);
+            this.comandos.TabIndex = 11;
+            this.comandos.Visible = false;
+            this.comandos.SelectedIndexChanged += new System.EventHandler(this.comandos_SelectedIndexChanged);
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSize = true;
+            this.descricao.Location = new System.Drawing.Point(346, 305);
+            this.descricao.Name = "descricao";
+            this.descricao.Size = new System.Drawing.Size(94, 13);
+            this.descricao.TabIndex = 12;
+            this.descricao.Text = "comandos de voz:";
+            this.descricao.Visible = false;
+            this.descricao.Click += new System.EventHandler(this.descricao_Click);
+            // 
             // casa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +215,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.descricao);
+            this.Controls.Add(this.comandos);
+            this.Controls.Add(this.ajuda);
             this.Controls.Add(this.cam_se);
             this.Controls.Add(this.temp_banheiro);
             this.Controls.Add(this.temp_sala);
@@ -179,7 +232,9 @@
             this.Name = "casa";
             this.Text = "cômodo";
             this.Load += new System.EventHandler(this.cômodo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ajuda)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -195,5 +250,8 @@
         private System.Windows.Forms.Button temp_sala;
         private System.Windows.Forms.Button temp_banheiro;
         private System.Windows.Forms.Button cam_se;
+        private System.Windows.Forms.PictureBox ajuda;
+        private System.Windows.Forms.ComboBox comandos;
+        private System.Windows.Forms.Label descricao;
     }
 }
