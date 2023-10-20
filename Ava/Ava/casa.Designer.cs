@@ -42,7 +42,10 @@
             this.ajuda = new System.Windows.Forms.PictureBox();
             this.comandos = new System.Windows.Forms.ComboBox();
             this.descricao = new System.Windows.Forms.Label();
+            this.menu = new System.Windows.Forms.PictureBox();
+            this.fechar_itns = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ajuda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.SuspendLayout();
             // 
             // mic
@@ -207,6 +210,31 @@
             this.descricao.Visible = false;
             this.descricao.Click += new System.EventHandler(this.descricao_Click);
             // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu.BackgroundImage")));
+            this.menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menu.Location = new System.Drawing.Point(45, 103);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(17, 169);
+            this.menu.TabIndex = 30;
+            this.menu.TabStop = false;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
+            // 
+            // fechar_itns
+            // 
+            this.fechar_itns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fechar_itns.ForeColor = System.Drawing.Color.Black;
+            this.fechar_itns.Location = new System.Drawing.Point(379, 368);
+            this.fechar_itns.Name = "fechar_itns";
+            this.fechar_itns.Size = new System.Drawing.Size(43, 23);
+            this.fechar_itns.TabIndex = 31;
+            this.fechar_itns.Text = "^";
+            this.fechar_itns.UseVisualStyleBackColor = true;
+            this.fechar_itns.Visible = false;
+            this.fechar_itns.Click += new System.EventHandler(this.fechar_itns_Click);
+            // 
             // casa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +243,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fechar_itns);
+            this.Controls.Add(this.menu);
             this.Controls.Add(this.descricao);
             this.Controls.Add(this.comandos);
             this.Controls.Add(this.ajuda);
@@ -233,6 +263,7 @@
             this.Text = "cômodo";
             this.Load += new System.EventHandler(this.cômodo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ajuda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +284,7 @@
         private System.Windows.Forms.PictureBox ajuda;
         private System.Windows.Forms.ComboBox comandos;
         private System.Windows.Forms.Label descricao;
+        private System.Windows.Forms.PictureBox menu;
+        private System.Windows.Forms.Button fechar_itns;
     }
 }

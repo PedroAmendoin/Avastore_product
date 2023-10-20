@@ -332,6 +332,8 @@ namespace Ava
         private void ajuda_Click(object sender, EventArgs e)
         {
             descricao.Visible = true;
+            comandos.Visible = true;
+            fechar_itns.Visible = true;
         }
 
         private void descricao_Click(object sender, EventArgs e)
@@ -342,6 +344,18 @@ namespace Ava
         private void comandos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void fechar_itns_Click(object sender, EventArgs e)
+        {
+            descricao.Visible = false;
+            comandos.Visible = false;
+            fechar_itns.Visible = false;
         }
     }
 }
