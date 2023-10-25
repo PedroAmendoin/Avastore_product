@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 10-Out-2023 às 23:43
+-- Tempo de geração: 25-Out-2023 às 22:01
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -38,14 +38,15 @@ CREATE TABLE IF NOT EXISTS `cadastrar` (
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`usuario`),
   UNIQUE KEY `id_usuario` (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `cadastrar`
 --
 
 INSERT INTO `cadastrar` (`apelido`, `usuario`, `senha`, `codigo`, `id_usuario`) VALUES
-('pedro', '123', '432', '222', 19);
+('pedro', '1', '5', '3', 20),
+('eduardo', 'eduardo', '1', '1', 21);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
