@@ -284,7 +284,7 @@ namespace Ava
                 mostrar();
             }
 
-            else if (frase.Equals("fechar"))
+            else if (frase.Equals("minimizar"))
             {
                 fechar();
             }
@@ -729,7 +729,7 @@ namespace Ava
 
         private void fechar_itns_MouseHover(object sender, EventArgs e)
         {
-            toolTip4.SetToolTip(fechar_itns, "clique para fechar leque \n ou \n diga 'fechar'");
+            toolTip4.SetToolTip(fechar_itns, "clique para fechar leque \n ou \n diga 'minimizar'");
         }
 
         private void toolTip4_Popup(object sender, PopupEventArgs e)
