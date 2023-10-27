@@ -125,7 +125,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
        
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem","expandir","mais","menu", "eiva?", "tuít", "feicebuk","wótizapi","ispótifai","crântirol","yutube","netflix","instagram","gugol","minha casa","loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem","expandir","mais","menu","minimizar", "eiva?", "tuít", "feicebuk","wótizapi","ispótifai","crântirol","yutube","netflix","instagram","gugol","minha casa","loguin", "obrigado" };
        LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
@@ -284,6 +284,11 @@ namespace Ava
                 mostrar();
             }
 
+            else if (frase.Equals("fechar"))
+            {
+                fechar();
+            }
+
 
             else if (frase.Equals("tuít"))
             {
@@ -339,7 +344,7 @@ namespace Ava
             else if (frase.Equals("crântirol"))
             {
 
-                resposta.SpeakAsync("abrindo crânti");
+                resposta.SpeakAsync("abrindo crânt");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
@@ -629,6 +634,12 @@ namespace Ava
 
         private void fechar_itns_Click(object sender, EventArgs e)
         {
+            fechar();
+        }
+
+    
+        public void fechar() { 
+        
 
             AVA_interactsd.Visible = false;
             AVA_interact.Visible = true;
@@ -642,9 +653,6 @@ namespace Ava
             instagram.Visible = false;
             fechar_itns.Visible = false;
         }
-
-    
-
    
 
         private void button1_Click(object sender, EventArgs e)
@@ -717,6 +725,16 @@ namespace Ava
             AVA_interact.Visible = true;
             }
             
+        }
+
+        private void fechar_itns_MouseHover(object sender, EventArgs e)
+        {
+            toolTip4.SetToolTip(fechar_itns, "clique para fechar leque \n ou \n diga 'fechar'");
+        }
+
+        private void toolTip4_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

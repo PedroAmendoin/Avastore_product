@@ -30648,7 +30648,7 @@
   <data name="acessar_casa.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAFY1JREFUeF7t3C3PZVWCBWD+QfEHKPgBBam/MZlMMo6EIFAkJAgMggQDAoEBg0CV
+        wQAADsEBuJFr7QAAFY1JREFUeF7t3C3PZVWCBWD+QfEHKPgBBam/MZlMMo6EIFAkJAgMggQDAoEBg0CV
         aTOmR7RpQdIJBtGCtOqUahQZV27sTJ/e92Tzcavq/bj3nrXueZ5kibfk3rXvWrmpel8BAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Hq9
@@ -30746,7 +30746,7 @@
   <data name="login.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAFYFJREFUeF7t3K3OZQWaBWDuoLiBAi6AItxGZzLJOBKCQJGQIDAIEgwIBIYyCFSZ
+        wQAADsEBuJFr7QAAFYFJREFUeF7t3K3OZQWaBWDuoLiBAi6AItxGZzLJOBKCQJGQIDAIEgwIBIYyCFSZ
         NmN6RJsWJJ1gEC1Iqw6qUaRdubEznN5n5+XnVNX3c37WOvt5kiVKnv3WPmvlS9X3EgAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADARx9/
@@ -30841,6 +30841,9 @@
         gk3XK9/Z1gAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>521, 17</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABoQAAAPeCAYAAAAlDHjoAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s

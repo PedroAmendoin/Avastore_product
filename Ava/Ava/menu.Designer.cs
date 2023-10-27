@@ -57,6 +57,7 @@
             this.acessar_casa = new System.Windows.Forms.PictureBox();
             this.login = new System.Windows.Forms.PictureBox();
             this.foco_olhar = new System.Windows.Forms.PictureBox();
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AVA_interactsd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acessar_casa)).BeginInit();
@@ -318,7 +319,9 @@
             this.fechar_itns.TabIndex = 23;
             this.fechar_itns.Text = "^";
             this.fechar_itns.UseVisualStyleBackColor = true;
+            this.fechar_itns.Visible = false;
             this.fechar_itns.Click += new System.EventHandler(this.fechar_itns_Click);
+            this.fechar_itns.MouseHover += new System.EventHandler(this.fechar_itns_MouseHover);
             // 
             // toolTip2
             // 
@@ -365,6 +368,10 @@
             this.foco_olhar.Click += new System.EventHandler(this.foco_olhar_Click);
             this.foco_olhar.MouseLeave += new System.EventHandler(this.foco_olhar_MouseLeave);
             this.foco_olhar.MouseHover += new System.EventHandler(this.foco_olhar_MouseHover);
+            // 
+            // toolTip4
+            // 
+            this.toolTip4.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip4_Popup);
             // 
             // menu
             // 
@@ -440,6 +447,7 @@
         private System.Windows.Forms.PictureBox acessar_casa;
         private System.Windows.Forms.PictureBox login;
         private System.Windows.Forms.PictureBox foco_olhar;
+        private System.Windows.Forms.ToolTip toolTip4;
     }
 }
 
