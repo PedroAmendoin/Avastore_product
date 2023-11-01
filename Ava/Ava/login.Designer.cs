@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.Entrar = new System.Windows.Forms.Button();
-            this.Senha = new System.Windows.Forms.TextBox();
-            this.Usuario = new System.Windows.Forms.TextBox();
             this.ir_cadastro = new System.Windows.Forms.LinkLabel();
             this.ed_conta = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Apelido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Apelido = new System.Windows.Forms.TextBox();
+            this.Usuario = new System.Windows.Forms.TextBox();
+            this.Senha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,36 +53,6 @@
             this.Entrar.Text = "Entrar";
             this.Entrar.UseVisualStyleBackColor = true;
             this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
-            // 
-            // Senha
-            // 
-            this.Senha.Location = new System.Drawing.Point(272, 229);
-            this.Senha.Name = "Senha";
-            this.Senha.Size = new System.Drawing.Size(250, 20);
-            this.Senha.TabIndex = 8;
-            this.Senha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Senha.Click += new System.EventHandler(this.Senha_Click);
-            this.Senha.TextChanged += new System.EventHandler(this.Senha_TextChanged);
-            this.Senha.DragOver += new System.Windows.Forms.DragEventHandler(this.Senha_DragOver);
-            this.Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyDown);
-            this.Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Senha_KeyPress);
-            this.Senha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyUp);
-            this.Senha.MouseLeave += new System.EventHandler(this.Senha_MouseLeave);
-            // 
-            // Usuario
-            // 
-            this.Usuario.Location = new System.Drawing.Point(272, 203);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(250, 20);
-            this.Usuario.TabIndex = 7;
-            this.Usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Usuario.Click += new System.EventHandler(this.Usuario_Click);
-            this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
-            this.Usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyDown);
-            this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
-            this.Usuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyUp);
-            this.Usuario.MouseLeave += new System.EventHandler(this.Usuario_MouseLeave);
-            this.Usuario.MouseHover += new System.EventHandler(this.Usuario_MouseHover);
             // 
             // ir_cadastro
             // 
@@ -130,24 +100,10 @@
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
-            // Apelido
-            // 
-            this.Apelido.Location = new System.Drawing.Point(272, 179);
-            this.Apelido.Name = "Apelido";
-            this.Apelido.Size = new System.Drawing.Size(250, 20);
-            this.Apelido.TabIndex = 18;
-            this.Apelido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Apelido.Click += new System.EventHandler(this.Apelido_Click);
-            this.Apelido.TextChanged += new System.EventHandler(this.Apelido_TextChanged);
-            this.Apelido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Apelido_KeyDown);
-            this.Apelido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Apelido_KeyPress);
-            this.Apelido.MouseLeave += new System.EventHandler(this.Apelido_MouseLeave);
-            this.Apelido.MouseHover += new System.EventHandler(this.Apelido_MouseHover);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 179);
+            this.label1.Location = new System.Drawing.Point(214, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 19;
@@ -157,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 203);
+            this.label2.Location = new System.Drawing.Point(214, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 20;
@@ -167,12 +123,53 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 229);
+            this.label3.Location = new System.Drawing.Point(214, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 21;
             this.label3.Text = "Senha:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // Apelido
+            // 
+            this.Apelido.Location = new System.Drawing.Point(283, 172);
+            this.Apelido.Name = "Apelido";
+            this.Apelido.Size = new System.Drawing.Size(235, 20);
+            this.Apelido.TabIndex = 22;
+            this.Apelido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Apelido.TextChanged += new System.EventHandler(this.Apelido_TextChanged);
+            this.Apelido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Apelido_KeyDown);
+            this.Apelido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Apelido_KeyPress);
+            this.Apelido.MouseLeave += new System.EventHandler(this.Apelido_MouseLeave);
+            this.Apelido.MouseHover += new System.EventHandler(this.Apelido_MouseHover);
+            // 
+            // Usuario
+            // 
+            this.Usuario.Location = new System.Drawing.Point(283, 205);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(235, 20);
+            this.Usuario.TabIndex = 23;
+            this.Usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
+            this.Usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyDown);
+            this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
+            this.Usuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Usuario_KeyUp);
+            this.Usuario.MouseLeave += new System.EventHandler(this.Usuario_MouseLeave);
+            this.Usuario.MouseHover += new System.EventHandler(this.Usuario_MouseHover);
+            // 
+            // Senha
+            // 
+            this.Senha.Location = new System.Drawing.Point(283, 240);
+            this.Senha.Name = "Senha";
+            this.Senha.Size = new System.Drawing.Size(235, 20);
+            this.Senha.TabIndex = 24;
+            this.Senha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Senha.TextChanged += new System.EventHandler(this.Senha_TextChanged);
+            this.Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyDown);
+            this.Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Senha_KeyPress);
+            this.Senha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyUp);
+            this.Senha.MouseLeave += new System.EventHandler(this.Senha_MouseLeave);
+            this.Senha.MouseHover += new System.EventHandler(this.Senha_MouseHover);
             // 
             // Login
             // 
@@ -182,16 +179,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Senha);
+            this.Controls.Add(this.Usuario);
+            this.Controls.Add(this.Apelido);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Apelido);
             this.Controls.Add(this.ed_conta);
             this.Controls.Add(this.ir_cadastro);
             this.Controls.Add(this.Entrar);
-            this.Controls.Add(this.Senha);
-            this.Controls.Add(this.Usuario);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -206,15 +203,15 @@
         #endregion
 
         private System.Windows.Forms.Button Entrar;
-        private System.Windows.Forms.TextBox Senha;
-        private System.Windows.Forms.TextBox Usuario;
         private System.Windows.Forms.LinkLabel ir_cadastro;
         private System.Windows.Forms.LinkLabel ed_conta;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox Apelido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Apelido;
+        private System.Windows.Forms.TextBox Usuario;
+        private System.Windows.Forms.TextBox Senha;
     }
 }

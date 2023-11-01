@@ -54,9 +54,11 @@ namespace Ava
                 this.Visible = false;
                 menu go_menu = new menu(us);
                 go_menu.ShowDialog();
-                Apelido.Text = null;//esvaziando textbox do apelido
-                Usuario.Text = null;//esvaziando textbox do usuario
+
+                Usuario.Text = null;//esvaziando textbox do apelido
+                Apelido.Text = null;//esvaziando textbox do usuario
                 Senha.Text = null;//esvaziando textbox da senha
+
                 this.Visible = true;
 
             }
@@ -64,25 +66,13 @@ namespace Ava
 
         }
 
-        private void Apelido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
         
 
-        private void Usuario_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-        
-        private void Senha_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void ir_cadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -90,7 +80,11 @@ namespace Ava
            this.Visible = false;
             Cadastrar gocadastrar = new Cadastrar();
             gocadastrar.ShowDialog();
-            
+
+            Usuario.Text = null;//esvaziando textbox do apelido
+            Apelido.Text = null;//esvaziando textbox do usuario
+            Senha.Text = null;//esvaziando textbox da senha
+
             this.Visible = true;
            
         }
@@ -102,7 +96,7 @@ namespace Ava
 
         private void Apelido_MouseLeave(object sender, EventArgs e)
         {
-            Apelido.Size = new System.Drawing.Size(250, 20);
+            Apelido.Size = new System.Drawing.Size(235, 20);
         }
 
         private void Apelido_Click(object sender, EventArgs e)
@@ -119,7 +113,7 @@ namespace Ava
 
         private void Usuario_MouseLeave(object sender, EventArgs e)
         {
-            Usuario.Size = new System.Drawing.Size(250, 20);
+            Usuario.Size = new System.Drawing.Size(235, 20);
         }
 
         private void Usuario_Click(object sender, EventArgs e)
@@ -127,14 +121,14 @@ namespace Ava
             Usuario.Size = new System.Drawing.Size(255, 20);
         }
 
-        private void Senha_DragOver(object sender, DragEventArgs e)
+        private void Senha_MouseHover(object sender, EventArgs e)
         {
             Senha.Size = new System.Drawing.Size(255, 20);
         }
 
         private void Senha_MouseLeave(object sender, EventArgs e)
         {
-            Senha.Size = new System.Drawing.Size(250, 20);
+            Senha.Size = new System.Drawing.Size(235, 20);
         }
 
         private void Senha_Click(object sender, EventArgs e)
@@ -154,21 +148,28 @@ namespace Ava
 
         private void ed_conta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Visible = false;
             Edicao_cnt goedicao = new Edicao_cnt();
             goedicao.ShowDialog();
+
+            Usuario.Text = null;//esvaziando textbox do apelido
+            Apelido.Text = null;//esvaziando textbox do usuario
+            Senha.Text = null;//esvaziando textbox da senha
+
+            this.Visible = true;
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
         }
-
+        
         private void Apelido_KeyPress(object sender, KeyPressEventArgs e)
         {
             //tecla enter
             if (e.KeyChar == 13)
             {
-                Senha.Focus();
+                Usuario.Focus();
             }
         }
 
@@ -271,6 +272,23 @@ namespace Ava
         {
 
         }
+
+        private void Apelido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Senha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 
 }
