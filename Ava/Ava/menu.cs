@@ -20,15 +20,19 @@ using Org.BouncyCastle.Crypto;
 using System.IO.Ports; // necessário para ter acesso as portas 
 using System.Diagnostics.Eventing.Reader;
 using Google.Protobuf.WellKnownTypes;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 
 namespace Ava
 {
 
-   
+
     public partial class menu : Form
     {
 
         int pergN = 0;//conta o número de vezes que pergunto o nome da Eiva
+
+        string tm = "";
         private void atualizaListaCOMs()
         {
             int i;
@@ -124,18 +128,18 @@ namespace Ava
         static CultureInfo ci = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
-       
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem","expandir","mais","menu","minimizar", "eiva?", "tuít", "feicebuk","wótizapi","ispótifai","crântirol","yutube","netflix","instagram","gugol","minha casa","loguin", "obrigado" };
-       LoginModelo logmodelo = new LoginModelo();
+
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
+        LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
             logmodelo = usuario;
             InitializeComponent();
             init();
-            
+
         }
 
-     
+
 
         public void Gramatica()
         {
@@ -197,13 +201,13 @@ namespace Ava
             if (frase.Length.Equals(null) == false)
             {
                 MyAsyncMethod();
-               
-            }
-           
 
-             async Task MyAsyncMethod()
-                {
-                     mic.BackColor = Color.Purple;
+            }
+
+
+            async Task MyAsyncMethod()
+            {
+                mic.BackColor = Color.Purple;
                 mic.ForeColor = Color.White;
                 mic.Text = "ouvindo";
 
@@ -212,7 +216,7 @@ namespace Ava
                 mic.BackColor = Color.White;
                 mic.ForeColor = Color.Black;
                 mic.Text = "mic";
-                }
+            }
 
             if (frase.Equals("olá"))
             {
@@ -288,6 +292,23 @@ namespace Ava
             {
                 fechar();
             }
+
+            else if (frase.Equals("data"))
+            {
+                DateTime localDate = DateTime.Now;
+                String[] cultureNames = { "pt-BR" };
+
+
+                DateTime.Now.ToString("MM/dd/yyyy h:mm tt");
+                new DateTime(2017, 12, 1).ToString(@"d \de MMM \de yyyy", new CultureInfo("PT-pt"));
+                string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy");
+
+                resposta.SpeakAsync(tm);
+
+            }
+
+           
+            
 
 
             else if (frase.Equals("tuít"))
