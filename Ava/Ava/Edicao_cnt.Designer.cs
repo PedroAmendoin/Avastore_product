@@ -44,6 +44,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.login = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Excluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.login)).BeginInit();
             this.SuspendLayout();
@@ -188,6 +189,17 @@
             this.login.Click += new System.EventHandler(this.login_Click);
             this.login.MouseHover += new System.EventHandler(this.login_MouseHover);
             // 
+            // Excluir
+            // 
+            this.Excluir.Location = new System.Drawing.Point(541, 360);
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(54, 23);
+            this.Excluir.TabIndex = 32;
+            this.Excluir.Text = "X";
+            this.Excluir.UseVisualStyleBackColor = true;
+            this.Excluir.Visible = false;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
+            // 
             // Edicao_cnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,6 +207,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Excluir);
             this.Controls.Add(this.login);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Enviar);
@@ -236,5 +249,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox login;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button Excluir;
     }
 }
