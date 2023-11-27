@@ -32,7 +32,7 @@ namespace Ava
 
         int pergN = 0;//conta o número de vezes que pergunto o nome da Eiva
 
-        string tm = "";
+       
         private void atualizaListaCOMs()
         {
             int i;
@@ -303,7 +303,7 @@ namespace Ava
                 new DateTime(2017, 12, 1).ToString(@"d \de MMM \de yyyy", new CultureInfo("PT-pt"));
                 string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy");
 
-                resposta.SpeakAsync(tm);
+               
 
             }
 

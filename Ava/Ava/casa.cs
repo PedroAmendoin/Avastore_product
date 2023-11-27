@@ -24,7 +24,7 @@ namespace Ava
         string tempS = "22°C";
         string tempB = "22°C";
 
-        int luz = 1;
+        
 
         static CultureInfo co = new CultureInfo("pt-BR");//definindo o idioma
         static SpeechRecognitionEngine reconhecedor2;
@@ -196,12 +196,12 @@ namespace Ava
             else if (frase.Equals("acender luz da sala"))
             {
                 sala.BackColor = Color.Yellow;
-                luz = 1;
+                
             }
             else if (frase.Equals("apagar luz da sala"))
             {
                 sala.BackColor = Color.Gainsboro;
-                luz = 2;
+                
             }
 
 

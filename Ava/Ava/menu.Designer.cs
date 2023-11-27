@@ -67,7 +67,7 @@
             // 
             // mic
             // 
-            this.mic.Location = new System.Drawing.Point(296, 444);
+            this.mic.Location = new System.Drawing.Point(296, 429);
             this.mic.Name = "mic";
             this.mic.Size = new System.Drawing.Size(201, 34);
             this.mic.TabIndex = 3;
@@ -108,7 +108,7 @@
             // 
             // btConectar
             // 
-            this.btConectar.Location = new System.Drawing.Point(296, 484);
+            this.btConectar.Location = new System.Drawing.Point(296, 471);
             this.btConectar.Name = "btConectar";
             this.btConectar.Size = new System.Drawing.Size(103, 23);
             this.btConectar.TabIndex = 6;
@@ -120,7 +120,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(405, 486);
+            this.comboBox1.Location = new System.Drawing.Point(405, 473);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 7;

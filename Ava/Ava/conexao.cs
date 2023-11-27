@@ -12,7 +12,7 @@ namespace Controller
     {
         //atributos de conexão
         static private string servidor = "localhost";
-        static private string bd = "avastore";
+        static private string bd = "ava";
         static private string usuario = "root";
         static private string senhabd = "";
         public MySqlConnection conn = null;

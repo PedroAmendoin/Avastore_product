@@ -28,10 +28,12 @@ namespace Ava
         private void Entrar_Click(object sender, EventArgs e)
         {
             conexao con = new conexao(); //chamando a minha conexão.
+            
             string logar = "SELECT * FROM cadastrar WHERE usuario=@usuario AND senha=@senha AND apelido=@apelido";
             MySqlConnection cnx = con.getconexao();
             MySqlCommand cmd = new MySqlCommand(logar, cnx);
             cnx.Open();
+
 
             //comparando os dados do banco e do visual
             cmd.Parameters.AddWithValue("@apelido", Apelido.Text);
