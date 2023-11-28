@@ -129,7 +129,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
 
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou bem", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou ótimo", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
         LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
@@ -269,13 +269,13 @@ namespace Ava
 
             else if (frase.Equals("tudo bem?"))
             {
-                resposta.SpeakAsync("estou em bom funcionamento");
+                resposta.SpeakAsync("tudo bem");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
             }
 
-            else if (frase.Equals("estou bem"))
+            else if (frase.Equals("estou ótimo"))
             {
                 resposta.SpeakAsync("bom saber!");
                 string c = "b";
@@ -440,17 +440,17 @@ namespace Ava
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
+                
                 this.Visible = false;
                 casa gocomodo = new casa();
                 gocomodo.ShowDialog();
                 this.Visible = true;
-                
+                fechar();
 
             }
 
             else if (frase.Equals("loguin"))
             {
-                resposta.SpeakAsync("até");
                 string c = "b";
                 if (serialPort.IsOpen == true)
                 serialPort.Write(c);
