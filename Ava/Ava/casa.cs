@@ -30,7 +30,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor2;
         SpeechSynthesizer resposta2 = new SpeechSynthesizer();
 
-        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "estou ótimo", "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "retornar","câmera", "obrigado" };
+        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "retornar","câmera", "obrigado" };
 
         public casa()
         {
@@ -125,11 +125,6 @@ namespace Ava
             else if (frase.Equals("tudo bem?"))
             {
                 resposta2.SpeakAsync("Tudo perfeito, e contigo?");
-            }
-
-            else if (frase.Equals("estou ótimo"))
-            {
-                resposta2.SpeakAsync("bom saber!");
             }
 
 

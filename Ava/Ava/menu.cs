@@ -129,7 +129,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
 
-        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "estou ótimo", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome", "boa noite eiva", "tudo bem?", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
         LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
@@ -275,13 +275,6 @@ namespace Ava
                     serialPort.Write(c);//envia variável
             }
 
-            else if (frase.Equals("estou ótimo"))
-            {
-                resposta.SpeakAsync("bom saber!");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-            }
 
             else if (frase.Equals("expandir") || frase.Equals("mais") || frase.Equals("menu"))
             {
