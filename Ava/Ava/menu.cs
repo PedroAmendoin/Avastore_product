@@ -220,12 +220,12 @@ namespace Ava
 
             if (frase.Equals("olá"))
             {
-
+                if(logmodelo.apelido!= "") { 
                 resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
-
+                }
             }
 
             else if (frase.Equals("obrigado"))
@@ -447,6 +447,7 @@ namespace Ava
                 string c = "b";
                 if (serialPort.IsOpen == true)
                 serialPort.Write(c);
+                logmodelo.apelido = "";
                 this.Close();
 
             }
@@ -714,6 +715,8 @@ namespace Ava
 
         private void login_Click(object sender, EventArgs e)
         {
+
+            logmodelo.apelido = "";
             this.Close();
         }
 
