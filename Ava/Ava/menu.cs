@@ -339,10 +339,10 @@ namespace Ava
 
 
 
-            else if (frase.Equals("wótzapi"))
+            else if (frase.Equals("wótizapi"))
             {
 
-                resposta.SpeakAsync("abrindo wótizapi");
+                resposta.SpeakAsync("abrindo uótizapi");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
@@ -367,7 +367,7 @@ namespace Ava
             else if (frase.Equals("crântirol"))
             {
 
-                resposta.SpeakAsync("abrindo crânt");
+                resposta.SpeakAsync("abrindo crânti");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
