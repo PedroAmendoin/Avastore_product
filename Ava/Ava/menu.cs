@@ -220,7 +220,7 @@ namespace Ava
 
             if (frase.Equals("olá"))
             {
-                if(logmodelo.apelido!= "") { 
+                if(logmodelo.apelido!= null) { 
                 resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
@@ -292,7 +292,6 @@ namespace Ava
                 String[] cultureNames = { "pt-BR" };
 
 
-                DateTime.Now.ToString("MM/dd/yyyy h:mm tt");
                 new DateTime(2017, 12, 1).ToString(@"d \de MMM \de yyyy", new CultureInfo("PT-pt"));
                 string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy") ;
                 resposta.SpeakAsync("a data de hoje é");
@@ -716,7 +715,7 @@ namespace Ava
         private void login_Click(object sender, EventArgs e)
         {
 
-            logmodelo.apelido = "";
+            logmodelo.apelido = null;
             this.Close();
         }
 
