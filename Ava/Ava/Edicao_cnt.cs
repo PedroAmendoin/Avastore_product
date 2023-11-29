@@ -139,7 +139,7 @@ namespace Ava
             if (Senha_nova.Text != null)
             { 
                 conexao conexao2 = new conexao();
-                string editar = "SELECT * FROM cadastrar WHERE usuario=@usuario AND senha=@senha";
+                string editar = "SELECT * FROM cadastro WHERE usuario=@usuario AND senha=@senha";
                 MySqlConnection cnx = conexao2.getconexao();
 
                 MySqlCommand cmd = new MySqlCommand(editar, cnx);
@@ -162,7 +162,7 @@ namespace Ava
                     MySqlConnection cn = conexao2.getconexao();
 
                     us.senha = Senha_nova.Text; //alterando o valor da senha para a da caixa de texto da nova senha
-                    string sql = "SELECT * FROM `cadastrar` WHERE usuario = '"+us.usuario+"'; UPDATE `cadastrar` SET senha = '"+us.senha+"' WHERE usuario = '"+us.usuario+"';";
+                    string sql = "SELECT * FROM `cadastro` WHERE usuario = '"+us.usuario+"'; UPDATE `cadastro` SET senha = '"+us.senha+"' WHERE usuario = '"+us.usuario+"';";
                     cn.Open();
                     MySqlCommand cmd2 = new MySqlCommand(sql, cn);
                     cmd2.ExecuteNonQuery();
@@ -176,7 +176,7 @@ namespace Ava
         private void Enviar_Click(object sender, EventArgs e)
         {
             conexao conexao3 = new conexao();
-            string logar = "SELECT * FROM cadastrar WHERE usuario=@usuario AND codigo=@codigo";
+            string logar = "SELECT * FROM cadastro WHERE usuario=@usuario AND codigo=@codigo";
             MySqlConnection cnx = conexao3.getconexao();
 
             MySqlCommand cmd = new MySqlCommand(logar, cnx);
@@ -197,7 +197,7 @@ namespace Ava
                 us.codigo = Convert.ToString(registro["codigo"]);
 
                 MySqlConnection cn = conexao3.getconexao();
-                string sql = "SELECT senha FROM cadastrar WHERE codigo='321'";
+                string sql = "SELECT senha FROM cadastro WHERE codigo='321'";
                 cn.Open();
                 MySqlCommand cmd1 = new MySqlCommand(sql, cn);
                 cmd1.ExecuteNonQuery();
@@ -217,7 +217,7 @@ namespace Ava
             {
 
                 conexao conexao = new conexao();
-                string logar = "SELECT * FROM cadastrar WHERE usuario=@usuario AND senha=@senha";
+                string logar = "SELECT * FROM cadastro WHERE usuario=@usuario AND senha=@senha";
                 MySqlConnection cnx = conexao.getconexao();
 
                 MySqlCommand cmd = new MySqlCommand(logar, cnx);
@@ -238,7 +238,7 @@ namespace Ava
                     us.senha = Convert.ToString(registro["senha"]);
 
                     MySqlConnection cn = conexao.getconexao();
-                    string sql = "DELETE FROM cadastrar WHERE usuario=@usuario AND senha=@senha";
+                    string sql = "DELETE FROM cadastro WHERE usuario=@usuario AND senha=@senha";
                     cn.Open();
                     MySqlCommand cmd1 = new MySqlCommand(sql, cn);
                     cmd1.Parameters.AddWithValue("@usuario", us.usuario);
