@@ -44,6 +44,8 @@ namespace Ava
             MySqlDataReader registro = cmd.ExecuteReader(); //executa a consulta.
             LoginModelo us = new LoginModelo(); //chamo a classe usuario modelo
 
+
+           
             if (registro.HasRows)
             {
                 registro.Read();
