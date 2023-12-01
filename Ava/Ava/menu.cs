@@ -129,7 +129,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
 
-        public string[] listaPalavras = { "olá", "qual é o seu nome?", "boa noite eiva", "tudo bem?", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome?", "boa noite eiva", "tudo bem?", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "abrir crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
         LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
@@ -217,6 +217,8 @@ namespace Ava
                 mic.ForeColor = Color.Black;
                 mic.Text = "mic";
             }
+
+            
 
             if (frase.Equals("olá"))
             {
@@ -356,7 +358,7 @@ namespace Ava
 
             }
 
-            else if (frase.Equals("crântirol"))
+            else if (frase.Equals("abrir crântirol"))
             {
 
                 resposta.SpeakAsync("abrindo crânti");
@@ -432,7 +434,8 @@ namespace Ava
                 string c = "b";
                 if (serialPort.IsOpen == true)//porta está aberta
                     serialPort.Write(c);//envia variável
-                
+
+                frase = null;
                 this.Visible = false;
                 casa gocomodo = new casa();
                 gocomodo.ShowDialog();
@@ -456,7 +459,7 @@ namespace Ava
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-           
+                
 
                 apelido.Text = logmodelo.apelido;//esvaziando textbox do usuario
                 timerCOM.Enabled = true;

@@ -81,10 +81,10 @@
             this.button1.Text = "voltar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // sala_esc
             // 
-            this.sala_esc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sala_esc.BackgroundImage")));
             this.sala_esc.Location = new System.Drawing.Point(0, 0);
             this.sala_esc.Name = "sala_esc";
             this.sala_esc.Size = new System.Drawing.Size(803, 451);
@@ -94,7 +94,6 @@
             // 
             // visao_not
             // 
-            this.visao_not.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("visao_not.BackgroundImage")));
             this.visao_not.Location = new System.Drawing.Point(0, 0);
             this.visao_not.Name = "visao_not";
             this.visao_not.Size = new System.Drawing.Size(803, 451);

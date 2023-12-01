@@ -242,7 +242,7 @@ namespace Ava
                
             }
 
-            else if (frase.Equals("câmera"))
+            else if (frase.Equals("câmera")&&!frase.Equals("minha casa"))
             {
                
                 this.Visible = false;
