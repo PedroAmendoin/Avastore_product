@@ -453,7 +453,6 @@ namespace Ava
                         casa gocomodo = new casa();
                         gocomodo.ShowDialog();
                         this.Visible = true;
-                        frase = null;
                         fechar();
 
                     }
@@ -723,10 +722,29 @@ namespace Ava
 
         private void acessar_casa_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            casa gocomodo = new casa();
-            gocomodo.ShowDialog();
-            this.Visible = true;
+
+            if (Application.OpenForms.OfType<casa>().Count() > 0)//se a quantidade desse forms for maior que zero
+            {
+                this.Visible = false;
+                Application.OpenForms["casa"].BringToFront();
+                this.Visible = true;
+            }
+            else //senao
+            {
+
+                resposta.SpeakAsync("abrindo sistema");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+
+
+                this.Visible = false;
+                casa gocomodo = new casa();
+                gocomodo.ShowDialog();
+                this.Visible = true;
+                fechar();
+
+            }
         }
 
         private void acessar_casa_MouseHover(object sender, EventArgs e)

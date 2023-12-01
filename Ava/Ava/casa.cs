@@ -225,12 +225,11 @@ namespace Ava
 
                 else if (frase.Equals("mídias"))
                 {
-
-                    frase = null;
+        
                     this.Visible = false;
 
-
                 }
+
 
                 else if (frase.Equals("câmera"))
                 {
@@ -344,7 +343,7 @@ namespace Ava
 
         private void menu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
         }
 
         private void fechar_itns_Click(object sender, EventArgs e)

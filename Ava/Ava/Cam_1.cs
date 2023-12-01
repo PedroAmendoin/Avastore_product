@@ -105,10 +105,7 @@ namespace Ava
                 else if (frase.Equals("voltar"))
                 {
 
-                    frase = null;
                     this.Visible = false;
-
-
 
                 }
 
