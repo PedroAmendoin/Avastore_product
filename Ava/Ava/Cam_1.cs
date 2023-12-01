@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Speech.Recognition;
 using System.Speech.Synthesis;
+using Org.BouncyCastle.Ocsp;
+using System.IO.Ports;
 
 
 namespace Ava
@@ -22,7 +24,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor3;
         SpeechSynthesizer resposta3 = new SpeechSynthesizer();
 
-        public string[] listaPalavras3 = { "voltar", "visão noturna"};
+        public string[] listaPalavras3 = {"voltar"};
 
         public Cam_1()
         {
@@ -100,7 +102,10 @@ namespace Ava
             else if (frase.Equals("voltar"))
             {
 
-                this.Close();
+                frase = null;
+                this.Visible = false;
+                
+              
 
             }
 
@@ -114,6 +119,8 @@ namespace Ava
 
         }
     
+
+        
 
 
         private void Cam_1_Load(object sender, EventArgs e)
@@ -142,11 +149,6 @@ namespace Ava
         private void cam_img_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void visao_not_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

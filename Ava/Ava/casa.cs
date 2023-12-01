@@ -12,7 +12,7 @@ using System.Speech.Synthesis;
 using System.Globalization;
 using System.Diagnostics;
 using System.Net.WebSockets;
-
+using Org.BouncyCastle.Tls.Crypto;
 
 namespace Ava
 {
@@ -30,7 +30,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor2;
         SpeechSynthesizer resposta2 = new SpeechSynthesizer();
 
-        public string[] listaPalavras2 = { "olá", "boa noite eiva", "tudo bem?", "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "retornar","câmera", "obrigado" };
+        public string[] listaPalavras2 = { "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "mídias","câmera", "obrigado" };
 
         public casa()
         {
@@ -112,24 +112,9 @@ namespace Ava
             }
 
 
-            if (frase.Equals("olá"))
-            {
-                resposta2.SpeakAsync("olá usuário, como posso ajudar?");
-            }
-
-            else if (frase.Equals("boa noite eiva"))
-            {
-                resposta2.SpeakAsync("boa noite");
-            }
-
-            else if (frase.Equals("tudo bem?"))
-            {
-                resposta2.SpeakAsync("Tudo perfeito, e contigo?");
-            }
 
 
-
-            else if (frase.Equals("eiva?"))
+                if (frase.Equals("eiva?"))
             {
                 mic.Focus();
                 resposta2.SpeakAsync("sim?");
@@ -186,17 +171,17 @@ namespace Ava
 
 
             //sala;
-            
+
 
             else if (frase.Equals("acender luz da sala"))
             {
                 sala.BackColor = Color.Yellow;
-                
+
             }
             else if (frase.Equals("apagar luz da sala"))
             {
                 sala.BackColor = Color.Gainsboro;
-                
+
             }
 
 
@@ -233,22 +218,34 @@ namespace Ava
                 temp_banheiro.Hide();
             }
 
-        
 
-            else if (frase.Equals("retornar"))
+
+            else if (frase.Equals("mídias"))
             {
 
+                frase = null;
                 this.Close();
-               
+
             }
 
-            else if (frase.Equals("câmera")&&!frase.Equals("minha casa"))
+            else if (frase.Equals("câmera"))
             {
+
+                if (Application.OpenForms.OfType<Cam_1>().Count() > 0)//se a quantidade desse forms for maior que zero
+                {
+                    this.Visible = false;
+                    Application.OpenForms["Cam_1"].BringToFront();
+                    this.Visible = true;
+                }
+               else //senao
+                {
+                    this.Visible = false;
+                    Cam_1 gocam = new Cam_1();
+                    gocam.ShowDialog();
+                    this.Visible = true;
+                }
                
-                this.Visible = false;
-                Cam_1 gocam = new Cam_1();
-                gocam.ShowDialog();
-                this.Visible = true;
+                
                
 
             }

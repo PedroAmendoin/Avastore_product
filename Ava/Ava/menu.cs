@@ -129,7 +129,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor;
         SpeechSynthesizer resposta = new SpeechSynthesizer();
 
-        public string[] listaPalavras = { "olá", "qual é o seu nome?", "boa noite eiva", "tudo bem?", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "abrir crântirol", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
+        public string[] listaPalavras = { "olá", "qual é o seu nome?", "boa noite eiva", "tudo bem?", "expandir", "mais", "menu", "minimizar", "eiva?", "data", "tuít", "feicebuk", "wótizapi", "ispótifai", "crânti", "yutube", "netflix", "instagram", "gugol", "minha casa", "loguin", "obrigado" };
         LoginModelo logmodelo = new LoginModelo();
         public menu(LoginModelo usuario)
         {
@@ -218,15 +218,15 @@ namespace Ava
                 mic.Text = "mic";
             }
 
-            
+
 
             if (frase.Equals("olá"))
             {
-                if(logmodelo.apelido!= null) { 
-                resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
+                if (logmodelo.apelido != null) {
+                    resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
                 }
             }
 
@@ -295,16 +295,16 @@ namespace Ava
 
 
                 new DateTime(2017, 12, 1).ToString(@"d \de MMM \de yyyy", new CultureInfo("PT-pt"));
-                string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy") ;
+                string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy");
                 resposta.SpeakAsync("a data de hoje é");
                 resposta.SpeakAsync(tm);
 
-               
+
 
             }
 
-           
-            
+
+
 
 
             else if (frase.Equals("tuít"))
@@ -345,6 +345,16 @@ namespace Ava
 
             }
 
+            else if (frase.Equals("crânti"))
+            {
+
+                resposta.SpeakAsync("abrindo crânti");
+                string c = "b";
+                if (serialPort.IsOpen == true)//porta está aberta
+                    serialPort.Write(c);//envia variável
+                string target = "https://www.crunchyroll.com/pt-br/";
+                System.Diagnostics.Process.Start(target);
+            }
 
             else if (frase.Equals("ispótifai"))
             {
@@ -358,17 +368,7 @@ namespace Ava
 
             }
 
-            else if (frase.Equals("abrir crântirol"))
-            {
-
-                resposta.SpeakAsync("abrindo crânti");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.crunchyroll.com/pt-br/";
-                System.Diagnostics.Process.Start(target);
-
-            }
+            
 
             else if (frase.Equals("yutube"))
             {
@@ -430,17 +430,31 @@ namespace Ava
 
             else if (frase.Equals("minha casa"))
             {
-                resposta.SpeakAsync("abrindo sistema");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
+                if (Application.OpenForms.OfType<casa>().Count() > 0)//se a quantidade desse forms for maior que zero
+                {
+                    this.Visible = false;
+                    Application.OpenForms["casa"].BringToFront();
+                    this.Visible = true;
+                }
+                else //senao
+                {
 
-                frase = null;
-                this.Visible = false;
-                casa gocomodo = new casa();
-                gocomodo.ShowDialog();
-                this.Visible = true;
-                fechar();
+                    resposta.SpeakAsync("abrindo sistema");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+
+                    
+                    this.Visible = false;
+                    casa gocomodo = new casa();
+                    gocomodo.ShowDialog();
+                    this.Visible = true;
+                    frase = null;
+                    fechar();
+
+                }
+
+                
 
             }
 

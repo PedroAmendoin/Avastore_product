@@ -100,7 +100,7 @@
             this.visao_not.TabIndex = 7;
             this.visao_not.UseVisualStyleBackColor = true;
             this.visao_not.Visible = false;
-            this.visao_not.Click += new System.EventHandler(this.visao_not_Click);
+            
             // 
             // Cam_1
             // 
