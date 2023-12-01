@@ -219,253 +219,258 @@ namespace Ava
             }
 
 
-
-            if (frase.Equals("olá"))
+            if (this.Visible == true)
             {
-                if (logmodelo.apelido != null) {
-                    resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
+
+                if (frase.Equals("olá"))
+                {
+                    if (logmodelo.apelido != null)
+                    {
+                        resposta.SpeakAsync("olá " + logmodelo.apelido + ", como posso ajudar");
+                        string c = "b";
+                        if (serialPort.IsOpen == true)//porta está aberta
+                            serialPort.Write(c);//envia variável
+                    }
+                }
+
+                else if (frase.Equals("obrigado"))
+                {
+                    resposta.SpeakAsync("disponha");
                     string c = "b";
                     if (serialPort.IsOpen == true)//porta está aberta
                         serialPort.Write(c);//envia variável
                 }
-            }
 
-            else if (frase.Equals("obrigado"))
-            {
-                resposta.SpeakAsync("disponha");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-            }
-
-            else if (frase.Equals("qual é o seu nome?"))
-            {
-                pergN = pergN + 1;
-
-                if (pergN == 1) {
-                    resposta.SpeakAsync("meu nome é eiva");
-                }
-                else if (pergN == 2)
+                else if (frase.Equals("qual é o seu nome?"))
                 {
-                    resposta.SpeakAsync("última vez que eu digo, meu nome é eiva");
-                }
-                else if (pergN > 2)
-                {
-                    resposta.SpeakAsync("você já sabe");
+                    pergN = pergN + 1;
+
+                    if (pergN == 1)
+                    {
+                        resposta.SpeakAsync("meu nome é eiva");
+                    }
+                    else if (pergN == 2)
+                    {
+                        resposta.SpeakAsync("última vez que eu digo, meu nome é eiva");
+                    }
+                    else if (pergN > 2)
+                    {
+                        resposta.SpeakAsync("você já sabe");
+                    }
+
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
                 }
 
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-            }
 
-
-            else if (frase.Equals("boa noite eiva"))
-            {
-                resposta.SpeakAsync("boa noite");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-
-            }
-
-            else if (frase.Equals("tudo bem?"))
-            {
-                resposta.SpeakAsync("tudo bem");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-            }
-
-
-            else if (frase.Equals("expandir") || frase.Equals("mais") || frase.Equals("menu"))
-            {
-                mostrar();
-            }
-
-            else if (frase.Equals("minimizar"))
-            {
-                fechar();
-            }
-
-            else if (frase.Equals("data"))
-            {
-                DateTime localDate = DateTime.Now;
-                String[] cultureNames = { "pt-BR" };
-
-
-                new DateTime(2017, 12, 1).ToString(@"d \de MMM \de yyyy", new CultureInfo("PT-pt"));
-                string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy");
-                resposta.SpeakAsync("a data de hoje é");
-                resposta.SpeakAsync(tm);
-
-
-
-            }
-
-
-
-
-
-            else if (frase.Equals("tuít"))
-            {
-
-                resposta.SpeakAsync("abrindo tuít");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.twitch.tv/";
-                System.Diagnostics.Process.Start(target);
-
-            }
-
-            else if (frase.Equals("feicebuk"))
-            {
-
-                resposta.SpeakAsync("abrindo feicebuk");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.facebook.com/?locale=pt_BR";
-                System.Diagnostics.Process.Start(target);
-
-            }
-
-
-
-            else if (frase.Equals("wótizapi"))
-            {
-
-                resposta.SpeakAsync("abrindo uótizapi");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://web.whatsapp.com/";
-                System.Diagnostics.Process.Start(target);
-
-            }
-
-            else if (frase.Equals("crânti"))
-            {
-
-                resposta.SpeakAsync("abrindo crânti");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.crunchyroll.com/pt-br/";
-                System.Diagnostics.Process.Start(target);
-            }
-
-            else if (frase.Equals("ispótifai"))
-            {
-
-                resposta.SpeakAsync("abrindo ispótifai");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://open.spotify.com/intl-pt";
-                System.Diagnostics.Process.Start(target);
-
-            }
-
-            
-
-            else if (frase.Equals("yutube"))
-            {
-
-                resposta.SpeakAsync("abrindo yutube");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.youtube.com/";
-                System.Diagnostics.Process.Start(target);
-
-            }
-
-
-            else if (frase.Equals("netflix"))
-            {
-
-                resposta.SpeakAsync("abrindo netflix");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.netflix.com/br/";
-                System.Diagnostics.Process.Start(target);
-
-            }
-            else if (frase.Equals("gugol"))
-            {
-
-                resposta.SpeakAsync("abrindo gugol");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.google.com.br/";
-                System.Diagnostics.Process.Start(target);
-
-            }
-
-            else if (frase.Equals("instagram"))
-            {
-                resposta.SpeakAsync("abrindo instagram");
-
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-                string target = "https://www.instagram.com/";
-                System.Diagnostics.Process.Start(target);
-            }
-
-
-
-            else if (frase.Equals("eiva?"))
-            {
-                mic.Focus();
-                resposta.SpeakAsync("sim?");
-                string c = "b";
-                if (serialPort.IsOpen == true)//porta está aberta
-                    serialPort.Write(c);//envia variável
-            }
-
-            else if (frase.Equals("minha casa"))
-            {
-                if (Application.OpenForms.OfType<casa>().Count() > 0)//se a quantidade desse forms for maior que zero
+                else if (frase.Equals("boa noite eiva"))
                 {
-                    this.Visible = false;
-                    Application.OpenForms["casa"].BringToFront();
-                    this.Visible = true;
-                }
-                else //senao
-                {
-
-                    resposta.SpeakAsync("abrindo sistema");
+                    resposta.SpeakAsync("boa noite");
                     string c = "b";
                     if (serialPort.IsOpen == true)//porta está aberta
                         serialPort.Write(c);//envia variável
 
-                    
-                    this.Visible = false;
-                    casa gocomodo = new casa();
-                    gocomodo.ShowDialog();
-                    this.Visible = true;
-                    frase = null;
+                }
+
+                else if (frase.Equals("tudo bem?"))
+                {
+                    resposta.SpeakAsync("tudo bem");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                }
+
+
+                else if (frase.Equals("expandir") || frase.Equals("mais") || frase.Equals("menu"))
+                {
+                    mostrar();
+                }
+
+                else if (frase.Equals("minimizar"))
+                {
                     fechar();
+                }
+
+                else if (frase.Equals("data"))
+                {
+                    DateTime localDate = DateTime.Now;
+                    String[] cultureNames = { "pt-BR" };
+
+
+                    new DateTime(2017, 12, 1).ToString(@"d \de MMM \de yyyy", new CultureInfo("PT-pt"));
+                    string tm = DateTime.Now.ToString(@"d \de MMM \de yyyy");
+                    resposta.SpeakAsync("a data de hoje é");
+                    resposta.SpeakAsync(tm);
+
+
 
                 }
 
-                
 
-            }
 
-            else if (frase.Equals("loguin"))
-            {
-                string c = "b";
-                if (serialPort.IsOpen == true)
-                serialPort.Write(c);
-                logmodelo.apelido = "";
-                this.Close();
 
+
+                else if (frase.Equals("tuít"))
+                {
+
+                    resposta.SpeakAsync("abrindo tuít");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.twitch.tv/";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+
+                else if (frase.Equals("feicebuk"))
+                {
+
+                    resposta.SpeakAsync("abrindo feicebuk");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.facebook.com/?locale=pt_BR";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+
+
+
+                else if (frase.Equals("wótizapi"))
+                {
+
+                    resposta.SpeakAsync("abrindo uótizapi");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://web.whatsapp.com/";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+
+                else if (frase.Equals("crânti"))
+                {
+
+                    resposta.SpeakAsync("abrindo crânti");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.crunchyroll.com/pt-br/";
+                    System.Diagnostics.Process.Start(target);
+                }
+
+                else if (frase.Equals("ispótifai"))
+                {
+
+                    resposta.SpeakAsync("abrindo ispótifai");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://open.spotify.com/intl-pt";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+
+
+
+                else if (frase.Equals("yutube"))
+                {
+
+                    resposta.SpeakAsync("abrindo yutube");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.youtube.com/";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+
+
+                else if (frase.Equals("netflix"))
+                {
+
+                    resposta.SpeakAsync("abrindo netflix");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.netflix.com/br/";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+                else if (frase.Equals("gugol"))
+                {
+
+                    resposta.SpeakAsync("abrindo gugol");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.google.com.br/";
+                    System.Diagnostics.Process.Start(target);
+
+                }
+
+                else if (frase.Equals("instagram"))
+                {
+                    resposta.SpeakAsync("abrindo instagram");
+
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                    string target = "https://www.instagram.com/";
+                    System.Diagnostics.Process.Start(target);
+                }
+
+
+
+                else if (frase.Equals("eiva?"))
+                {
+                    mic.Focus();
+                    resposta.SpeakAsync("sim?");
+                    string c = "b";
+                    if (serialPort.IsOpen == true)//porta está aberta
+                        serialPort.Write(c);//envia variável
+                }
+
+                else if (frase.Equals("minha casa"))
+                {
+                    if (Application.OpenForms.OfType<casa>().Count() > 0)//se a quantidade desse forms for maior que zero
+                    {
+                        this.Visible = false;
+                        Application.OpenForms["casa"].BringToFront();
+                        this.Visible = true;
+                    }
+                    else //senao
+                    {
+
+                        resposta.SpeakAsync("abrindo sistema");
+                        string c = "b";
+                        if (serialPort.IsOpen == true)//porta está aberta
+                            serialPort.Write(c);//envia variável
+
+
+                        this.Visible = false;
+                        casa gocomodo = new casa();
+                        gocomodo.ShowDialog();
+                        this.Visible = true;
+                        frase = null;
+                        fechar();
+
+                    }
+
+
+
+                }
+
+                else if (frase.Equals("loguin"))
+                {
+                    string c = "b";
+                    if (serialPort.IsOpen == true)
+                        serialPort.Write(c);
+                    logmodelo.apelido = "";
+                    this.Close();
+
+                }
             }
 
 

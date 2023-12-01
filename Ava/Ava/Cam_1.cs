@@ -89,37 +89,40 @@ namespace Ava
 
             string frase = e.Result.Text;
 
+            while (this.Visible == true)
+            {
+
 
                 if (frase.Equals("eiva?"))
-            {
+                {
 
-                resposta3.SpeakAsync("sim?");
+                    resposta3.SpeakAsync("sim?");
+
+                }
+
+
+
+                else if (frase.Equals("voltar"))
+                {
+
+                    frase = null;
+                    this.Visible = false;
+
+
+
+                }
+
+
+
+                else if (frase.Equals("obrigado"))
+                {
+                    resposta3.SpeakAsync("disponha");
+                }
+
 
             }
-
-
-
-            else if (frase.Equals("voltar"))
-            {
-
-                frase = null;
-                this.Visible = false;
-                
-              
-
-            }
-
-
-
-            else if (frase.Equals("obrigado"))
-            {
-                resposta3.SpeakAsync("disponha");
-            }
-
 
         }
-    
-
         
 
 
