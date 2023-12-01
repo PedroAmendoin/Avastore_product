@@ -36,24 +36,6 @@ namespace Controller
 
         }
 
-        public DataTable ObterDados(string sql)
-        {
-            //crio uma nova tabela de dados
-            DataTable dt = new DataTable();
-            //conn é a conexão com o banco de dados
-            MySqlConnection conn = con.getconexao();
-            conn.Open();//Abre o Banco de Dados
-                        //Preparo o comando sql
-            MySqlCommand sqlCon = new MySqlCommand(sql, conn);
-            //tipo de instrução de texto
-            sqlCon.CommandType = System.Data.CommandType.Text;
-            sqlCon.CommandText = sql;
-            //Irá montar as informações da consulta
-            MySqlDataAdapter dados = new MySqlDataAdapter(sqlCon);
-            dados.Fill(dt);//Montar a tabela de dados
-            conn.Close();//fecho a conexao
-            return dt;//retorna as informações da tabela
-        }
     }
 }
 
