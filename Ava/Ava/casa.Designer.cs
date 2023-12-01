@@ -190,7 +190,7 @@
             "\"temperatura da cozinha/sala\"",
             "\"fechar temperatura da cozinha/sala\",",
             "",
-            "\"mídias\"",
+            "\"mídia\"",
             "\"câmera\""});
             this.comandos.Location = new System.Drawing.Point(294, 330);
             this.comandos.Name = "comandos";
