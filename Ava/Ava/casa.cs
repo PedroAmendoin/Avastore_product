@@ -30,7 +30,7 @@ namespace Ava
         static SpeechRecognitionEngine reconhecedor2;
         SpeechSynthesizer resposta2 = new SpeechSynthesizer();
 
-        public string[] listaPalavras2 = { "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "mídias","câmera", "obrigado" };
+        public string[] listaPalavras2 = { "eiva?","acender luz do quarto","apagar luz do quarto","temperatura do quarto","fechar temperatura do quarto", "acender luz da cozinha","apagar luz da cozinha","temperatura da cozinha","fechar temperatura da cozinha", "acender luz da sala","apagar luz da sala","temperatura da sala","fechar temperatura da sala", "acender luz do banheiro","apagar luz do banheiro","temperatura do banheiro","fechar temperatura do banheiro", "mídia","câmera", "obrigado" };
 
         public casa()
         {
@@ -112,7 +112,7 @@ namespace Ava
             }
 
 
-            while (this.Visible == true)//se estiver invisivel não receberá comandos
+            if (this.Visible == true)//se estiver invisivel não receberá comandos
             {
 
 
@@ -223,7 +223,7 @@ namespace Ava
 
 
 
-                else if (frase.Equals("mídias"))
+                else if (frase.Equals("mídia"))
                 {
         
                     this.Visible = false;

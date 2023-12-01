@@ -89,7 +89,7 @@ namespace Ava
 
             string frase = e.Result.Text;
 
-            while (this.Visible == true)
+            if (this.Visible == true)
             {
 
 
