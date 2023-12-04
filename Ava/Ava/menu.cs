@@ -439,6 +439,7 @@ namespace Ava
                         this.Visible = false;
                         Application.OpenForms["casa"].BringToFront();
                         this.Visible = true;
+                        frase = null;
                     }
                     else //senao
                     {
@@ -472,7 +473,7 @@ namespace Ava
                 }
             }
 
-
+        
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
